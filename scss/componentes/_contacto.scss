@@ -1,0 +1,154 @@
+@import "./componentes/variables";
+@mixin animacion{
+    animation: fadeIn;
+    animation-duration: 4.5s;  
+}
+//      *** DarkMode ***
+body{
+    background: $colorBlanco;
+    transition: .5s ease all;
+
+    &.dark{
+        background: $colorNegro;
+        .textoContacto{
+            color: $colorBlanco;
+            }   
+    }
+}
+//      *** Contacto ***
+.contacto{
+    font-style: italic;
+    text-align: center;
+        h1{
+        @include animacion;
+        color: transparent;
+        background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
+        -webkit-background-clip: text;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: $titulo-computadora;
+        }
+        .textoContacto{
+            font-size: $fuente-computadora;
+        }
+        img{
+        @include animacion;
+        width: 75%;
+        margin-bottom: 20px;     
+            &:hover{
+                transform: scale(1.01, 1.01);
+                    }                
+        }
+}
+//      *** Mobile 320px  ***
+@media only screen and (max-width:320px){
+    .contacto{
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "video"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a{
+                grid-area: video;
+            }
+            .textoContacto{
+                grid-area: texto;
+                font-size: $fuente-celular-pequeño;
+            }
+            h1{
+                grid-area: titulo;
+                padding: 20px;
+                font-size: $titulo-celular-pequeño;
+            }
+            img{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+    }
+}
+//      *** Mobile 320px Fin ***
+//      *** Mobile 321px A 599px  ***
+@media only screen and (min-width:321px) and (max-width: 599px){
+    .contacto{
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "video"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a{
+                grid-area: video;
+            }
+            .textoContacto{
+                grid-area: texto;
+                font-size: $fuente-celular-horizontal;
+            }
+            h1{
+                grid-area: titulo;
+                font-size: $titulo-celular-horizontal;
+            }img{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+    }
+}
+//      *** Mobile 321px A 599px Fin ***
+//      *** Mobile 600px A 768px  ***
+@media only screen and (min-width:600px) and (max-width:768px){
+    .contacto{
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "video"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a{
+                grid-area: video;
+            }
+            .textoContacto{
+                grid-area: texto;
+                font-size: $fuente-tablet-chica;
+            }
+            h1{
+                grid-area: titulo;
+                font-size: $titulo-tablet-chica;
+            }
+            img{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+    }
+} 
+//      *** Mobile 600px A 768px Fin ***
+//      *** Mobile 769px A 1300px  ***
+@media only screen and (min-width:769px) and (max-width:1300px){
+    .contacto{
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "video"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a{
+                grid-area: video;
+            }
+            h1{
+                grid-area: titulo;
+                font-size: $titulo-tablet-horizontal;
+            }           
+            .textoContacto{
+                grid-area: texto;
+                font-size: $fuente-tablet-horizontal;
+            }
+            img{
+                width: 75%;
+                margin-bottom: 20px;
+            }
+    }
+}
+//      *** Mobile 769px A 1300px Fin ***

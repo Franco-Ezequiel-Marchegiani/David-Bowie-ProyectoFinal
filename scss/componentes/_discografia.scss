@@ -1,0 +1,225 @@
+@import "./componentes/variables";
+@mixin animacionArriba {
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+}
+@mixin animacionAbajo {
+    animation: fadeInDown;
+    animation-duration: 1.5s;
+}
+@mixin widthHeigth100 {
+    width: 100%;
+    height: 100%;
+}
+//      *** DarkMode ***
+body{
+    background: $colorBlanco;
+    transition: .5s ease all;
+
+    &.dark {
+        background: $colorNegro;
+            .subTituloDisco{
+            color: $colorBlanco;
+            }   
+    }
+}
+//      *** Discografía ***
+.discos {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    }
+.card {
+    @include animacionArriba;
+    margin-bottom: 50px;
+    background: $colorBlanco;
+    box-shadow: $sombraDark;
+    transition: .3s ease all;
+            body.dark & {
+                background: $grisOscuro;
+                box-shadow: $sombraLight;
+                    .card-title{
+                        color: $colorBlanco;
+                    }
+                    .card-text{
+                        color: $colorBlanco;
+                    }
+            }
+    }
+.tituloDiscos {
+    text-align: center;
+        h1 {
+        font-size: $titulo-computadora;
+        text-decoration: none;
+        color: transparent;
+        background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
+        -webkit-background-clip: text;
+        padding-top: 30px;
+        }
+        h2 {
+        @include animacionAbajo;
+        font-size: $subTitulo-computadora;       
+        padding: 30px;
+        }
+}
+.discos img {
+    width: 550px;
+    height: 550px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        &:hover {
+        transform: scale(1.01, 1.01);
+        border: 1px solid rgb(0, 0, 0);
+        }
+}
+//      *** Discografía Mobile 320px ***
+@media only screen and (max-width:320px){
+    .discos {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "link"
+            "subtitulo";
+        grid-template-rows: 1fr;
+        grid-template-columns: 100%;
+        padding: 20px;
+            a {
+                grid-area: link;
+                width: 100%;
+            }
+            h2 {
+                grid-area: titulo;
+                font-size: 16px;
+                margin: 20px;
+            }
+            h3 {
+                grid-area: subtitulo;
+                font-size: 12px;
+                margin: 5px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                align-self: center;
+            }
+    }
+    .tituloDiscos{
+            h1{
+                font-size: $titulo-celular-pequeño;
+                padding: 20px;
+            }
+            h2{
+                font-size: $subTitulo-celular-pequeño; 
+            }
+    }
+}
+//      *** Discografía Mobile 320px Fin ***
+//      *** Discografía Mobile 321px A 599px ***
+@media only screen and (min-width:321px) and (max-width: 599px){
+    .discos {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "link"
+            "subtitulo";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        padding: 50px;
+            a {
+                grid-area: link;
+                width: 100%;
+            }
+            h2 {
+                grid-area: titulo;
+                font-size: 18px;
+                margin: 20px;
+            }
+            h3 {
+                grid-area: subtitulo;
+                font-size: 14px;
+                margin: 5px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                align-self: center;
+            }
+    }
+    .tituloDiscos{
+            h1{
+                font-size: $titulo-celular-horizontal;
+            }
+            h2{
+                font-size: $subTitulo-celular-horizontal;
+            }
+    }
+}
+//      *** Discografía Mobile 321px A 599px Fin ***
+//      *** Discografía Mobile 600px A 768px ***
+@media only screen and (min-width:600px) and (max-width:768px){
+    .discos {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "link"
+            "subtitulo";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        padding: 50px;
+            a {
+                grid-area: link;
+                width: 100%;
+            }
+            h2 {
+                grid-area: titulo;
+                font-size: 18px;
+                margin: 20px;
+            }
+            h3 {
+                grid-area: subtitulo;
+                font-size: 14px;
+                margin: 5px;
+            }
+            img {
+                @include widthHeigth100;
+                align-self: center;
+            }
+    }
+    .tituloDiscos{
+            h1{
+                font-size: $titulo-tablet-chica;
+            }
+            h2{
+                font-size: $subTitulo-tablet-chica;
+            }
+    }
+}
+//      *** Discografía Mobile 600px A 768px Fin ***
+//      *** Discografía Mobile 769px A 1300px ***
+@media only screen and (min-width:769px) and (max-width:1300px){
+    .discos{
+            img{
+                width: 500px;
+                height: 500px;
+                border: 1px solid;
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            }  
+            &:hover {
+            transform: scale(1.03, 1.03);
+            border: 1px solid rgb(0, 0, 0);
+            }
+    }    
+    .tituloDiscos{
+            h1{
+                font-size: $titulo-tablet-horizontal;
+            }
+            h2{
+                font-size: $subTitulo-tablet-horizontal;
+            }
+    }
+}
+//      *** Discografía Mobile 769px A 1300px Fin ***
+

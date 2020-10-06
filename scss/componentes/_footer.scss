@@ -1,0 +1,288 @@
+@import "./componentes/variables";
+body{
+    background: $colorBlanco;
+    transition: .5s ease all;
+    &.dark{
+        .fab{
+            color: $colorNegro;
+        }
+    }
+}
+footer {
+    background: linear-gradient(0deg, rgb(105, 97, 255) 0%, rgb(202, 60, 60) 100%);
+    display: grid;
+    grid-template-areas:
+    "descripcion bowie misRedes";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    li{
+        list-style: none;            
+    }
+    .fab{
+        padding-right: 85px;
+    }
+    .fa-instagram{
+        color: $colorBlanco;
+        &:hover{
+            transition: .4s;
+            color: #e4405f;
+        }
+    }
+    .fa-facebook-square{
+        color: $colorBlanco;
+        &:hover{
+            transition: .4s;
+            color:#3b5999;
+        }
+    }
+    .fa-linkedin{
+        color: $colorBlanco;
+        &:hover{
+            transition: .4s;
+            color: #0077B5;
+        }    
+    }
+    .fa-github-square{
+        color: $colorBlanco;
+        &:hover{
+        transition: .4s;
+        color: #333333;
+        }
+    }
+}
+.descripcion__footer {
+    grid-area: descripcion;
+    align-self: center;
+    text-align: center;
+    color: black; 
+    padding-bottom: 10px;
+        .footer__imagen{
+            width: 150px;
+            align-self: center;
+            padding-top: 20px;
+        }      
+        .texto__Footer{
+            font-size: $fuente-computadora;
+        }
+}
+.redes__bowie {
+    text-align: center;
+    grid-area: bowie;
+    font-size: 150px;
+    align-self: center;
+        p{
+            font-size: $subTitulo-computadora;
+            color: black;
+        }
+        
+}
+.mis__redes {
+    text-align: center;
+    grid-area: misRedes;
+    font-size: 100px;
+    align-self: center;
+        p{
+            font-size: $fuente-computadora;
+            color: black;
+        }
+
+}
+/*** Footer Mobile Home 320px ***/
+@media only screen and (max-width:320px) {
+footer {
+    grid-template-areas:
+    "descripcion"
+    "bowie"
+    "misRedes";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+        p {
+            font-size: $fuente-celular-pequeño;
+            padding-top: 20px;
+        }
+        a {
+            padding-left: 50px;
+        }
+}
+.descripcion__footer {
+    grid-area: descripcion;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 10px;
+    color: black;
+        img {
+            width: 30%;
+            align-self: center;
+            padding-top: 20px;
+        }
+}
+.redes__bowie {
+    text-align: center;
+    grid-area: bowie;
+    font-size: 40px;
+    align-self: center;
+        p {
+            font-size: 24px;
+        }
+}
+.mis__redes {
+    text-align: center;
+    grid-area: misRedes;
+    font-size: 40px;
+    align-self: center;
+        
+   }
+}
+//      *** Footer Mobile 320px Fin***
+//      *** Footer Mobile 321px A 599px ***
+@media only screen and (min-width:321px) and (max-width: 599px) {
+    footer {
+        grid-template-areas: 
+        "descripcion"
+        "bowie"
+        "misRedes";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            p {
+                font-size: 16px;
+                padding-top: 20px;
+            }
+            a {
+                padding-left: 50px;
+            }
+    }
+    .descripcion__footer {
+        grid-area: descripcion;
+        align-self: center;
+        text-align: center;
+        padding-bottom: 10px;
+        color: black;
+            .texto__Footer{
+            font-size: $fuente-celular-horizontal;
+            }
+            img {
+                width: 38%;
+                align-self: center;
+                padding-top: 20px;
+            }
+    }
+    .redes__bowie {
+        text-align: center;
+        grid-area: bowie;
+        font-size: 60px;
+        align-self: center;
+            p {
+                font-size: $fuente-celular-horizontal;
+            }
+    }
+    .mis__redes {
+        text-align: center;
+        grid-area: misRedes;
+        font-size: 60px;
+        align-self: center;
+            p {
+                font-size: $fuente-celular-horizontal;
+            }
+    }
+}
+//      *** Footer Mobile 321px A 599px Fin***
+//      *** Footer Mobile 600px A 768px ***
+footer {
+    grid-template-areas: 
+    "descripcion"
+    "bowie"
+    "misRedes";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+        p {
+            font-size: 18px;
+            padding-top: 20px;
+        }
+        a {
+            padding-left: 50px;
+        }
+}
+.descripcion__footer {
+    grid-area: descripcion;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 10px;
+    color: black;
+        .texto__Footer{
+            font-size: $fuente-tablet-chica;
+        }
+        img {
+            width: 40%;
+            align-self: center;
+            padding-top: 20px;
+        }
+}
+.redes__bowie {
+    text-align: center;
+    grid-area: bowie;
+    font-size: 60px;
+    align-self: center;
+        p {
+            font-size: $fuente-tablet-chica;
+        }
+}
+.mis__redes {
+    text-align: center;
+    grid-area: misRedes;
+    font-size: 60px;
+    align-self: center;
+        p {
+            font-size: $fuente-tablet-chica;
+        }
+}
+//      *** Footer Mobile 600px A px 768Fin***
+//      *** Footer Mobile 769px A 1300px ***
+@media only screen and (min-width:769px) and (max-width:2100px) {
+    footer {
+        grid-template-areas: 
+        "descripcion bowie misRedes";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+            p {
+                padding-top: 20px;
+            }
+            a {
+                padding-left: 50px;
+            }
+    }
+    .descripcion__footer {
+        grid-area: descripcion;
+        align-self: center;
+        text-align: center;
+        padding-bottom: 10px;
+        color: black;
+            img {
+                width: 55%;
+                align-self: center;
+                padding-top: 20px;
+            }
+            .texto__Footer{
+            font-size: $fuente-tablet-horizontal;
+            }
+    }
+    .redes__bowie {
+        text-align: center;
+        grid-area: bowie;
+        font-size: 75px;
+        align-self: center;
+            p {
+                font-size: $fuente-tablet-horizontal;
+                color: black;
+            }
+    }
+    .mis__redes {
+        text-align: center;
+        grid-area: misRedes;
+        font-size: 75px;
+        align-self: center;
+            p {
+                font-size: $fuente-tablet-horizontal;
+            }
+    }
+}
+//      *** Footer Mobile 769px A 1300px Fin***

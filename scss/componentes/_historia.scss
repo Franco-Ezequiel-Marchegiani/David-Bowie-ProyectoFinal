@@ -1,0 +1,926 @@
+@import "./componentes/variables";
+@mixin animacionIzquierda {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+}
+@mixin animacionDerecha {
+    animation: fadeInRightBig;
+    animation-duration: 2s;
+}
+@mixin titulo {
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
+    -webkit-background-clip: text;
+    animation: fadeInDown;
+    animation-duration: 2s;
+}
+@mixin colorBarraHistoria {
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(255, 55, 96, 1) 100%);
+}
+//      *** DarkMode ***
+body{
+    background: $colorBlanco;
+    transition: .5s ease all;
+    &.dark {
+            background: $colorNegro;
+            .nav.justify-content-center{
+                background: $colorNegro;
+                transition: .5s ease all;
+            }
+            .subTituloHistoria{
+                color: $colorBlanco;
+            }
+            .historiaBowieTexto{
+                color: $colorBlanco;
+            }
+            .bonusHistoria{
+                    p{
+                       color: $colorBlanco; 
+                    }
+            }
+            .subtituloZiggyHistoria{
+                color: $colorBlanco;
+            }
+            .ziggyStardustHistoria{
+                    p{
+                        color: $colorBlanco;
+                    }
+            }
+            .subtituloEpocaOscuraHistoria{
+                color: $colorBlanco;
+            }
+            .epocaOscuraHistoria{
+                    p{
+                        color: $colorBlanco;
+                    }
+            }
+            .subtituloRenacimientoHistoria{
+                color: $colorBlanco;
+            }
+            .renacimientoHistoria{
+                    p{
+                        color: $colorBlanco;
+                    }
+            }
+            .subtituloFinCaminoHistoria{
+                color: $colorBlanco;
+            }
+            .finDelCamino{
+                    p{
+                        color: $colorBlanco;
+                    }
+            }
+    }
+}
+//      *** DarkMode Fin ***
+//      *** Titulos Historia ***
+.tituloHistoria {
+    @include titulo;
+    font-size: $titulo-computadora;
+}
+h2{
+    @include animacionIzquierda
+    font-size: $titulo-celular-horizontal;
+    padding: 40px;
+}
+//      *** Titulos Historia Fin ***
+//      *** Barra Historia ***
+.barraHistoria {
+    margin: 10px;
+    margin-top: 50px;
+    padding: 40px;
+}
+.nav.justify-content-center {
+    background-color: $colorBlanco;
+    padding: 40px;
+    margin-bottom: 50px;
+    li{
+        font-size: $subTitulo-computadora;
+        font-weight: 700;
+    }
+}
+.nav-item {
+    justify-content: center;
+    align-self: center;
+}
+//      *** Barra Historia Fin***
+//      *** GRID Historia  ***
+.comienzoHistoria {
+    display: grid;
+    grid-template-areas: 
+    "img aside"
+    "p aside";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+        p {
+            grid-area: p;
+            align-self: center;
+            padding: 20px;
+            font-size: $fuente-computadora;
+        }
+        a {
+            grid-area: img;
+            align-self: center;
+            margin: 20px;
+        }
+        aside {
+            grid-area: aside;
+            align-self: center;
+            margin: 50px;
+        }
+        img {
+            @include animacionIzquierda
+            height: 500px;
+            margin: 5px 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .historiaBowieTexto {
+            @include animacionIzquierda
+            padding-bottom: 500px;
+        }
+}
+.bonusHistoria {
+    p{
+        @include animacionDerecha
+        width: 620px;
+    }
+    img {
+        @include animacionDerecha
+        width: 600px;
+        height: 800px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.ziggyStardustHistoria {
+    display: grid;
+    grid-template-areas: 
+    "texto imagen"
+    "texto imagen";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+        a {
+            grid-area: imagen;
+            align-self: center;
+            margin: 30px;
+        }
+        p {
+            grid-area: texto;
+            align-self: center;
+            margin: 40px;
+            font-size: $fuente-computadora;
+        }
+        p{
+            @include animacionIzquierda
+            display: inline-block;
+            overflow: hidden;
+        }
+        img {
+            @include animacionDerecha
+            width: 500px;
+        }
+}
+.epocaOscuraHistoria {
+    display: grid;
+    grid-template-areas:
+        "foto muchoTexto"
+        "foto muchoTexto";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto 70%;
+        a {
+            grid-area: foto;
+            align-self: center;
+            margin: 30px;
+        }
+        p {
+            grid-area: muchoTexto;
+            align-self: center;
+            margin: 50px;
+            font-size: $fuente-computadora;
+        }
+        p {
+            @include animacionDerecha
+            width: 75%;
+        }
+        img {
+            @include animacionIzquierda
+            width: 450px;      
+        }
+}
+.renacimientoHistoria {
+    display: grid;
+    grid-template-areas:
+        "texto foto"
+        "texto foto";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+        a {
+            grid-area: foto;
+            align-self: center;
+            margin: 30px;
+        }
+        p {
+            grid-area: texto;
+            align-self: center;
+            margin: 50px;
+            font-size: $fuente-computadora;
+        }
+        p{
+            @include animacionIzquierda
+            display: inline-block;
+        }
+        img {
+            @include animacionDerecha
+            width: 500px;
+        }
+}
+.finDelCamino {
+    display: grid;
+    grid-template-areas:
+        "video texto"
+        "video texto";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+        a {
+            grid-area: video;
+            align-self: center;
+            margin: 30px;
+        }
+        p {
+            grid-area: texto;
+            align-self: center;
+            margin: 50px;
+            font-size: $fuente-computadora;
+        }
+        p{
+            @include animacionDerecha;
+            display: inline-block;
+        }
+        img {
+            @include animacionIzquierda;
+            width: 900px;
+        }
+}
+//      *** GRID Historia Fin ***
+@media only screen and (max-width:320px){
+//      *** Home Mobile 320px  ***
+    .tituloHistoria {
+        font-size: $titulo-celular-pequeño;
+    }
+    h2 {
+        text-align: center;
+        margin: 5px;
+        font-size: $subTitulo-celular-horizontal;
+    }
+    .nav.justify-content-center {
+        li{
+            font-size: $subTitulo-celular-pequeño;
+            font-weight: 700;
+        }
+    }
+//      * Bowie *
+    .comienzoHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto"
+            "aside";
+        grid-template-rows: 1fr;
+        grid-template-columns: 100%;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                font-size: $fuente-celular-pequeño;
+            }
+            .historiaBowieTexto {
+            padding-bottom: 0;
+            }
+            aside {
+                grid-area: aside;
+                align-self: center;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+    .bonusHistoria {
+        p{
+            width:100%;
+        }     
+    }
+//      * Ziggy *
+    .ziggyStardustHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                font-size: $fuente-celular-pequeño;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+//      * Epoca Oscura *
+    .epocaOscuraHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                font-size: $fuente-celular-pequeño;
+            }
+            img {
+                width: 250px;
+                height: 100%;
+            }
+    }
+//      * Renacimiento *
+    .renacimientoHistoria {
+        display: grid;
+        grid-template-areas:
+            "foto"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: foto;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                font-size: $fuente-celular-pequeño;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+//      * Fin del Camino *
+    .finDelCamino {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+            }
+            p {
+                grid-area: texto;
+                display: inline-block;
+                margin: 5px;
+                font-size: $fuente-celular-pequeño;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+    }
+}
+//      *** Home Mobile 320px  FIN ***
+//      *** Home Mobile 321px A 599px ***
+@media only screen and (min-width:321px) and (max-width: 599px){
+    .tituloHistoria {
+        font-size: $titulo-celular-horizontal;
+    }
+    h2{
+        font-size: $subTitulo-tablet-chica;
+        text-align: center;
+    }
+    .nav.justify-content-center {
+        li{
+            font-size: $subTitulo-celular-horizontal;
+            font-weight: 700;
+        }
+    }
+//      * Bowie *
+    .comienzoHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto"
+            "aside";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                font-size: $fuente-celular-horizontal;
+            }
+            .historiaBowieTexto {
+                padding-bottom: 0;
+            }
+            img {
+                width: 90%;
+                height: 90%;
+            }
+            aside {
+                grid-area: aside;
+                align-self: center;
+            }
+        .bonusHistoria{
+                p{
+                    width:100%;
+                    font-size: $fuente-celular-horizontal;
+                }
+        }
+    }
+//      * Ziggy *
+    .ziggyStardustHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                font-size: $fuente-celular-horizontal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+//      * Epoca Oscura *
+    .epocaOscuraHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                font-size: $fuente-celular-horizontal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+    }
+//      * Renacimiento *
+    .renacimientoHistoria {
+        display: grid;
+        grid-template-areas:
+            "foto"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: foto;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                display: inline-block;
+                font-size: $fuente-celular-horizontal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+    }
+//      * Fin del Camino *
+    .finDelCamino {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        a {
+            grid-area: imagen;
+        }
+        p {
+            grid-area: texto;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: $fuente-celular-horizontal;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+} 
+//      *** Home Mobile 321px A 599px FIN *** 
+//      *** Home Mobile 600px A 768px ***
+@media only screen and (min-width:600px) and (max-width:768px){
+    .tituloHistoria {
+        font-size: $titulo-tablet-chica;
+    }
+    h2{
+        font-size: $subTitulo-tablet-horizontal;
+        text-align: center;
+        margin: 5px;
+    }
+//      * Bowie *
+    .nav.justify-content-center {
+        li{
+            font-size: $subTitulo-tablet-chica;
+            font-weight: 700;
+        }
+    }
+    .comienzoHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto"
+            "aside";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+            }
+            .historiaBowieTexto {
+                padding-bottom: 0;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+            aside {
+                grid-area: aside;
+                align-self: center;
+                p {
+                    width: 100%;
+                }
+            }          
+    }
+//      * Ziggy *
+    .ziggyStardustHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+//      * Epoca Oscura *
+    .epocaOscuraHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+//      * Renacimiento *
+    .renacimientoHistoria {
+        display: grid;
+        grid-template-areas:
+            "foto"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: foto;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                display: inline-block;
+                margin: 5px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+//      * Fin del Camino *
+    .finDelCamino {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+            }
+            p {
+                grid-area: texto;
+                display: inline-block;
+            margin: 5px;
+            margin-bottom: 30px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+    }
+}
+//      *** Home Mobile 600px A 768px FIN ***
+//      *** Home Mobile 769px A 1200***
+@media only screen and (min-width:769px) and (max-width:1199px){
+    .tituloHistoria {
+        font-size: $titulo-tablet-horizontal;
+    }
+    h2 {
+        font-size: $subTitulo-computadora;
+        text-align: center;
+    }
+    .nav.justify-content-center {
+        li{
+            font-size: $subTitulo-tablet-horizontal;
+            font-weight: 700;
+        }
+    }
+//      * Bowie *
+    .comienzoHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto"
+            "aside";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                font-size: $fuente-tablet-horizontal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+            .historiaBowieTexto {
+                padding-bottom: 0;
+            }
+            aside {
+                grid-area: aside;
+                align-self: center;
+                p {
+                    width: 100%;
+                    font-size: $fuente-tablet-horizontal;
+                }
+            }
+    }
+//      * Ziggy *
+    .ziggyStardustHistoria {
+        display: grid;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                font-size: $fuente-tablet-horizontal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+//      * Epoca Oscura *
+    .epocaOscuraHistoria {
+        display: grid;
+        grid-template-areas:
+        "imagen"
+        "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                font-size: $fuente-tablet-horizontal;
+                width: 90%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+    }
+//      * Renacimiento *
+    .renacimientoHistoria {
+        display: grid;
+        grid-template-areas:
+        "foto"
+        "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: foto;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+                align-self: center;
+                display: inline-block;
+                margin: 5px;
+                font-size: $fuente-tablet-horizontal;
+
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+            }
+    }
+//      * Fin del Camino *
+    .finDelCamino {
+        display: grid;
+        grid-template-areas:
+        "imagen"
+        "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+            }
+            p {
+                grid-area: texto;
+                display: inline-block;
+                margin: 5px;
+                margin-bottom: 30px;
+                font-size: $fuente-tablet-horizontal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+    }
+}
+//      *** Home Mobile 769px A 1200 FIN ***
+@media only screen and (min-width:1200px) and (max-width:1300px){
+    .tituloHistoria {
+        font-size: $titulo-tablet-horizontal;
+    }
+    h2 {
+        font-size: $titulo-celular-pequeño;
+        text-align: center;
+    }
+    .comienzoHistoria {
+        display: grid;
+        grid-template-areas:
+        "imagen aside"
+        "texto aside";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+            }
+            p {
+                grid-area: texto;
+            }
+            .historiaBowieTexto {
+                padding-bottom: 0;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                margin: 5px;
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+            aside {
+                grid-area: aside;
+                align-self: center;
+                p {
+                    width: 100%;
+                }
+            }
+    }
+    .finDelCamino {
+        display: grid;
+        grid-template-areas:
+        "imagen"
+        "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+            }
+            p {
+                grid-area: texto;
+                display: inline-block;
+                margin: 5px;
+                margin-bottom: 30px;
+                font-size: $fuente-tablet-horizontal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+    }
+}
+@media only screen and (min-width:1300px) and (max-width:1400px){
+    .finDelCamino {
+        display: grid;
+        grid-template-areas:
+        "imagen"
+        "texto";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+            a {
+                grid-area: imagen;
+            }
+            p {
+                grid-area: texto;
+                display: inline-block;
+                margin: 5px;
+                margin-bottom: 30px;
+                font-size: $fuente-tablet-horizontal;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+    }
+}

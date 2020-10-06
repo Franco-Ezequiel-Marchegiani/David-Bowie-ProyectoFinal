@@ -1,0 +1,41 @@
+@import "./componentes/variables";
+.switch{
+    text-align: center;
+    background: $azul;
+    border-radius: 1000px;
+    border: none;
+    position: relative; // Importante para la bola del DarkMode
+    cursor: pointer;
+    display: flex;
+    outline: none;
+        &::after {
+            content: ""; //Importante para el funcionamiento del resto de las funciones
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background: #F1F1F1;
+            top: 0;
+            left: 0;
+            right: unset;
+            border-radius: 100px;
+            transition: .3s ease all;
+            box-shadow: 0px 7px 2px 2px rgba(0,0,0,.2);
+        }
+        &.active{
+            background: $rojo;
+            color: #000;
+                &::after{
+                    right: 0;
+                    left: unset;
+                }
+        }
+        span {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            background: none;
+            color: #fff;    
+        }
+}

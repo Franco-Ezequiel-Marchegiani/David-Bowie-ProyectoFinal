@@ -1,0 +1,1428 @@
+/*** Variables Colores ***/
+body {
+  background: #fcfcfc;
+  transition: .5s ease all; }
+  body.dark {
+    background: #000004; }
+    body.dark .textoContacto {
+      color: #fcfcfc; }
+
+.contacto {
+  font-style: italic;
+  text-align: center; }
+  .contacto h1 {
+    animation: fadeIn;
+    animation-duration: 4.5s;
+    color: transparent;
+    background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
+    -webkit-background-clip: text;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 45px; }
+  .contacto .textoContacto {
+    font-size: 22px; }
+  .contacto img {
+    animation: fadeIn;
+    animation-duration: 4.5s;
+    width: 75%;
+    margin-bottom: 20px; }
+    .contacto img:hover {
+      transform: scale(1.01, 1.01); }
+
+@media only screen and (max-width: 320px) {
+  .contacto {
+    display: grid;
+    grid-template-areas: "titulo" "video" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .contacto a {
+      grid-area: video; }
+    .contacto .textoContacto {
+      grid-area: texto;
+      font-size: 14px; }
+    .contacto h1 {
+      grid-area: titulo;
+      padding: 20px;
+      font-size: 25px; }
+    .contacto img {
+      width: 100%;
+      margin-bottom: 20px; } }
+
+@media only screen and (min-width: 321px) and (max-width: 599px) {
+  .contacto {
+    display: grid;
+    grid-template-areas: "titulo" "video" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .contacto a {
+      grid-area: video; }
+    .contacto .textoContacto {
+      grid-area: texto;
+      font-size: 18px; }
+    .contacto h1 {
+      grid-area: titulo;
+      font-size: 30px; }
+    .contacto img {
+      width: 100%;
+      margin-bottom: 20px; } }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .contacto {
+    display: grid;
+    grid-template-areas: "titulo" "video" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .contacto a {
+      grid-area: video; }
+    .contacto .textoContacto {
+      grid-area: texto;
+      font-size: 18px; }
+    .contacto h1 {
+      grid-area: titulo;
+      font-size: 35px; }
+    .contacto img {
+      width: 100%;
+      margin-bottom: 20px; } }
+
+@media only screen and (min-width: 769px) and (max-width: 1300px) {
+  .contacto {
+    display: grid;
+    grid-template-areas: "titulo" "video" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .contacto a {
+      grid-area: video; }
+    .contacto h1 {
+      grid-area: titulo;
+      font-size: 40px; }
+    .contacto .textoContacto {
+      grid-area: texto;
+      font-size: 22px; }
+    .contacto img {
+      width: 75%;
+      margin-bottom: 20px; } }
+
+/*** Variables Colores ***/
+body {
+  background: #fcfcfc;
+  transition: .5s ease all; }
+  body.dark {
+    background: #000004; }
+    body.dark .subTituloDisco {
+      color: #fcfcfc; }
+
+.discos {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around; }
+
+.card {
+  animation: fadeInUp;
+  animation-duration: 1.5s;
+  margin-bottom: 50px;
+  background: #fcfcfc;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+  transition: .3s ease all; }
+  body.dark .card {
+    background: #222222;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16); }
+    body.dark .card .card-title {
+      color: #fcfcfc; }
+    body.dark .card .card-text {
+      color: #fcfcfc; }
+
+.tituloDiscos {
+  text-align: center; }
+  .tituloDiscos h1 {
+    font-size: 45px;
+    text-decoration: none;
+    color: transparent;
+    background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
+    -webkit-background-clip: text;
+    padding-top: 30px; }
+  .tituloDiscos h2 {
+    animation: fadeInDown;
+    animation-duration: 1.5s;
+    font-size: 24px;
+    padding: 30px; }
+
+.discos img {
+  width: 550px;
+  height: 550px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  .discos img:hover {
+    transform: scale(1.01, 1.01);
+    border: 1px solid black; }
+
+@media only screen and (max-width: 320px) {
+  .discos {
+    display: grid;
+    grid-template-areas: "titulo" "link" "subtitulo";
+    grid-template-rows: 1fr;
+    grid-template-columns: 100%;
+    padding: 20px; }
+    .discos a {
+      grid-area: link;
+      width: 100%; }
+    .discos h2 {
+      grid-area: titulo;
+      font-size: 16px;
+      margin: 20px; }
+    .discos h3 {
+      grid-area: subtitulo;
+      font-size: 12px;
+      margin: 5px; }
+    .discos img {
+      width: 100%;
+      height: 100%;
+      align-self: center; }
+  .tituloDiscos h1 {
+    font-size: 25px;
+    padding: 20px; }
+  .tituloDiscos h2 {
+    font-size: 16px; } }
+
+@media only screen and (min-width: 321px) and (max-width: 599px) {
+  .discos {
+    display: grid;
+    grid-template-areas: "titulo" "link" "subtitulo";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding: 50px; }
+    .discos a {
+      grid-area: link;
+      width: 100%; }
+    .discos h2 {
+      grid-area: titulo;
+      font-size: 18px;
+      margin: 20px; }
+    .discos h3 {
+      grid-area: subtitulo;
+      font-size: 14px;
+      margin: 5px; }
+    .discos img {
+      width: 100%;
+      height: 100%;
+      align-self: center; }
+  .tituloDiscos h1 {
+    font-size: 30px; }
+  .tituloDiscos h2 {
+    font-size: 18px; } }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .discos {
+    display: grid;
+    grid-template-areas: "titulo" "link" "subtitulo";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding: 50px; }
+    .discos a {
+      grid-area: link;
+      width: 100%; }
+    .discos h2 {
+      grid-area: titulo;
+      font-size: 18px;
+      margin: 20px; }
+    .discos h3 {
+      grid-area: subtitulo;
+      font-size: 14px;
+      margin: 5px; }
+    .discos img {
+      width: 100%;
+      height: 100%;
+      align-self: center; }
+  .tituloDiscos h1 {
+    font-size: 35px; }
+  .tituloDiscos h2 {
+    font-size: 20px; } }
+
+@media only screen and (min-width: 769px) and (max-width: 1300px) {
+  .discos img {
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  .discos:hover {
+    transform: scale(1.03, 1.03);
+    border: 1px solid black; }
+  .tituloDiscos h1 {
+    font-size: 40px; }
+  .tituloDiscos h2 {
+    font-size: 22px; } }
+
+/*** Variables Colores ***/
+body {
+  background: #fcfcfc;
+  transition: .5s ease all; }
+  body.dark .fab {
+    color: #000004; }
+
+footer {
+  background: linear-gradient(0deg, #6961ff 0%, #ca3c3c 100%);
+  display: grid;
+  grid-template-areas: "descripcion bowie misRedes";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr; }
+  footer li {
+    list-style: none; }
+  footer .fab {
+    padding-right: 85px; }
+  footer .fa-instagram {
+    color: #fcfcfc; }
+    footer .fa-instagram:hover {
+      transition: .4s;
+      color: #e4405f; }
+  footer .fa-facebook-square {
+    color: #fcfcfc; }
+    footer .fa-facebook-square:hover {
+      transition: .4s;
+      color: #3b5999; }
+  footer .fa-linkedin {
+    color: #fcfcfc; }
+    footer .fa-linkedin:hover {
+      transition: .4s;
+      color: #0077B5; }
+  footer .fa-github-square {
+    color: #fcfcfc; }
+    footer .fa-github-square:hover {
+      transition: .4s;
+      color: #333333; }
+
+.descripcion__footer {
+  grid-area: descripcion;
+  align-self: center;
+  text-align: center;
+  color: black;
+  padding-bottom: 10px; }
+  .descripcion__footer .footer__imagen {
+    width: 150px;
+    align-self: center;
+    padding-top: 20px; }
+  .descripcion__footer .texto__Footer {
+    font-size: 22px; }
+
+.redes__bowie {
+  text-align: center;
+  grid-area: bowie;
+  font-size: 150px;
+  align-self: center; }
+  .redes__bowie p {
+    font-size: 24px;
+    color: black; }
+
+.mis__redes {
+  text-align: center;
+  grid-area: misRedes;
+  font-size: 100px;
+  align-self: center; }
+  .mis__redes p {
+    font-size: 22px;
+    color: black; }
+
+/*** Footer Mobile Home 320px ***/
+@media only screen and (max-width: 320px) {
+  footer {
+    grid-template-areas: "descripcion" "bowie" "misRedes";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    footer p {
+      font-size: 14px;
+      padding-top: 20px; }
+    footer a {
+      padding-left: 50px; }
+  .descripcion__footer {
+    grid-area: descripcion;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 10px;
+    color: black; }
+    .descripcion__footer img {
+      width: 30%;
+      align-self: center;
+      padding-top: 20px; }
+  .redes__bowie {
+    text-align: center;
+    grid-area: bowie;
+    font-size: 40px;
+    align-self: center; }
+    .redes__bowie p {
+      font-size: 24px; }
+  .mis__redes {
+    text-align: center;
+    grid-area: misRedes;
+    font-size: 40px;
+    align-self: center; } }
+
+@media only screen and (min-width: 321px) and (max-width: 599px) {
+  footer {
+    grid-template-areas: "descripcion" "bowie" "misRedes";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    footer p {
+      font-size: 16px;
+      padding-top: 20px; }
+    footer a {
+      padding-left: 50px; }
+  .descripcion__footer {
+    grid-area: descripcion;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 10px;
+    color: black; }
+    .descripcion__footer .texto__Footer {
+      font-size: 18px; }
+    .descripcion__footer img {
+      width: 38%;
+      align-self: center;
+      padding-top: 20px; }
+  .redes__bowie {
+    text-align: center;
+    grid-area: bowie;
+    font-size: 60px;
+    align-self: center; }
+    .redes__bowie p {
+      font-size: 18px; }
+  .mis__redes {
+    text-align: center;
+    grid-area: misRedes;
+    font-size: 60px;
+    align-self: center; }
+    .mis__redes p {
+      font-size: 18px; } }
+
+footer {
+  grid-template-areas: "descripcion" "bowie" "misRedes";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr; }
+  footer p {
+    font-size: 18px;
+    padding-top: 20px; }
+  footer a {
+    padding-left: 50px; }
+
+.descripcion__footer {
+  grid-area: descripcion;
+  align-self: center;
+  text-align: center;
+  padding-bottom: 10px;
+  color: black; }
+  .descripcion__footer .texto__Footer {
+    font-size: 18px; }
+  .descripcion__footer img {
+    width: 40%;
+    align-self: center;
+    padding-top: 20px; }
+
+.redes__bowie {
+  text-align: center;
+  grid-area: bowie;
+  font-size: 60px;
+  align-self: center; }
+  .redes__bowie p {
+    font-size: 18px; }
+
+.mis__redes {
+  text-align: center;
+  grid-area: misRedes;
+  font-size: 60px;
+  align-self: center; }
+  .mis__redes p {
+    font-size: 18px; }
+
+@media only screen and (min-width: 769px) and (max-width: 2100px) {
+  footer {
+    grid-template-areas: "descripcion bowie misRedes";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr; }
+    footer p {
+      padding-top: 20px; }
+    footer a {
+      padding-left: 50px; }
+  .descripcion__footer {
+    grid-area: descripcion;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 10px;
+    color: black; }
+    .descripcion__footer img {
+      width: 55%;
+      align-self: center;
+      padding-top: 20px; }
+    .descripcion__footer .texto__Footer {
+      font-size: 22px; }
+  .redes__bowie {
+    text-align: center;
+    grid-area: bowie;
+    font-size: 75px;
+    align-self: center; }
+    .redes__bowie p {
+      font-size: 22px;
+      color: black; }
+  .mis__redes {
+    text-align: center;
+    grid-area: misRedes;
+    font-size: 75px;
+    align-self: center; }
+    .mis__redes p {
+      font-size: 22px; } }
+
+/*** Variables Colores ***/
+.navbar {
+  font-size: 18px;
+  font-weight: 700;
+  background: #fcfcfc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  transition: .3s ease all;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16); }
+  body.dark .navbar {
+    background: #222222;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16); }
+    body.dark .navbar i {
+      color: #fcfcfc; }
+  .navbar img {
+    width: 100px;
+    height: 100px; }
+  .navbar nav {
+    align-self: center;
+    margin: 5px;
+    display: inline; }
+
+.nav-link {
+  padding: 5px;
+  margin: 10px; }
+
+#navbarNav {
+  text-align: center; }
+
+/*** Variables Colores ***/
+body {
+  background: #fcfcfc;
+  transition: .5s ease all; }
+  body.dark {
+    background: #000004; }
+    body.dark .nav.justify-content-center {
+      background: #000004;
+      transition: .5s ease all; }
+    body.dark .subTituloHistoria {
+      color: #fcfcfc; }
+    body.dark .historiaBowieTexto {
+      color: #fcfcfc; }
+    body.dark .bonusHistoria p {
+      color: #fcfcfc; }
+    body.dark .subtituloZiggyHistoria {
+      color: #fcfcfc; }
+    body.dark .ziggyStardustHistoria p {
+      color: #fcfcfc; }
+    body.dark .subtituloEpocaOscuraHistoria {
+      color: #fcfcfc; }
+    body.dark .epocaOscuraHistoria p {
+      color: #fcfcfc; }
+    body.dark .subtituloRenacimientoHistoria {
+      color: #fcfcfc; }
+    body.dark .renacimientoHistoria p {
+      color: #fcfcfc; }
+    body.dark .subtituloFinCaminoHistoria {
+      color: #fcfcfc; }
+    body.dark .finDelCamino p {
+      color: #fcfcfc; }
+
+.tituloHistoria {
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
+  -webkit-background-clip: text;
+  animation: fadeInDown;
+  animation-duration: 2s;
+  font-size: 45px; }
+
+h2 {
+  animation: fadeInLeftBig;
+  animation-duration: 2s;
+  font-size: 30px;
+  padding: 40px; }
+
+.barraHistoria {
+  margin: 10px;
+  margin-top: 50px;
+  padding: 40px; }
+
+.nav.justify-content-center {
+  background-color: #fcfcfc;
+  padding: 40px;
+  margin-bottom: 50px; }
+  .nav.justify-content-center li {
+    font-size: 24px;
+    font-weight: 700; }
+
+.nav-item {
+  justify-content: center;
+  align-self: center; }
+
+.comienzoHistoria {
+  display: grid;
+  grid-template-areas: "img aside" "p aside";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr auto; }
+  .comienzoHistoria p {
+    grid-area: p;
+    align-self: center;
+    padding: 20px;
+    font-size: 22px; }
+  .comienzoHistoria a {
+    grid-area: img;
+    align-self: center;
+    margin: 20px; }
+  .comienzoHistoria aside {
+    grid-area: aside;
+    align-self: center;
+    margin: 50px; }
+  .comienzoHistoria img {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+    height: 500px;
+    margin: 5px 20px;
+    padding-left: 80px;
+    padding-right: 80px; }
+  .comienzoHistoria .historiaBowieTexto {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+    padding-bottom: 500px; }
+
+.bonusHistoria p {
+  animation: fadeInRightBig;
+  animation-duration: 2s;
+  width: 620px; }
+
+.bonusHistoria img {
+  animation: fadeInRightBig;
+  animation-duration: 2s;
+  width: 600px;
+  height: 800px;
+  padding-left: 0;
+  padding-right: 0; }
+
+.ziggyStardustHistoria {
+  display: grid;
+  grid-template-areas: "texto imagen" "texto imagen";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr auto; }
+  .ziggyStardustHistoria a {
+    grid-area: imagen;
+    align-self: center;
+    margin: 30px; }
+  .ziggyStardustHistoria p {
+    grid-area: texto;
+    align-self: center;
+    margin: 40px;
+    font-size: 22px; }
+  .ziggyStardustHistoria p {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+    display: inline-block;
+    overflow: hidden; }
+  .ziggyStardustHistoria img {
+    animation: fadeInRightBig;
+    animation-duration: 2s;
+    width: 500px; }
+
+.epocaOscuraHistoria {
+  display: grid;
+  grid-template-areas: "foto muchoTexto" "foto muchoTexto";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto 70%; }
+  .epocaOscuraHistoria a {
+    grid-area: foto;
+    align-self: center;
+    margin: 30px; }
+  .epocaOscuraHistoria p {
+    grid-area: muchoTexto;
+    align-self: center;
+    margin: 50px;
+    font-size: 22px; }
+  .epocaOscuraHistoria p {
+    animation: fadeInRightBig;
+    animation-duration: 2s;
+    width: 75%; }
+  .epocaOscuraHistoria img {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+    width: 450px; }
+
+.renacimientoHistoria {
+  display: grid;
+  grid-template-areas: "texto foto" "texto foto";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr auto; }
+  .renacimientoHistoria a {
+    grid-area: foto;
+    align-self: center;
+    margin: 30px; }
+  .renacimientoHistoria p {
+    grid-area: texto;
+    align-self: center;
+    margin: 50px;
+    font-size: 22px; }
+  .renacimientoHistoria p {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+    display: inline-block; }
+  .renacimientoHistoria img {
+    animation: fadeInRightBig;
+    animation-duration: 2s;
+    width: 500px; }
+
+.finDelCamino {
+  display: grid;
+  grid-template-areas: "video texto" "video texto";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr auto; }
+  .finDelCamino a {
+    grid-area: video;
+    align-self: center;
+    margin: 30px; }
+  .finDelCamino p {
+    grid-area: texto;
+    align-self: center;
+    margin: 50px;
+    font-size: 22px; }
+  .finDelCamino p {
+    animation: fadeInRightBig;
+    animation-duration: 2s;
+    display: inline-block; }
+  .finDelCamino img {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+    width: 900px; }
+
+@media only screen and (max-width: 320px) {
+  .tituloHistoria {
+    font-size: 25px; }
+  h2 {
+    text-align: center;
+    margin: 5px;
+    font-size: 18px; }
+  .nav.justify-content-center li {
+    font-size: 16px;
+    font-weight: 700; }
+  .comienzoHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto" "aside";
+    grid-template-rows: 1fr;
+    grid-template-columns: 100%; }
+    .comienzoHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .comienzoHistoria p {
+      grid-area: texto;
+      font-size: 14px; }
+    .comienzoHistoria .historiaBowieTexto {
+      padding-bottom: 0; }
+    .comienzoHistoria aside {
+      grid-area: aside;
+      align-self: center; }
+    .comienzoHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .bonusHistoria p {
+    width: 100%; }
+  .ziggyStardustHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .ziggyStardustHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .ziggyStardustHistoria p {
+      grid-area: texto;
+      align-self: center;
+      font-size: 14px; }
+    .ziggyStardustHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .epocaOscuraHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .epocaOscuraHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .epocaOscuraHistoria p {
+      grid-area: texto;
+      align-self: center;
+      font-size: 14px; }
+    .epocaOscuraHistoria img {
+      width: 250px;
+      height: 100%; }
+  .renacimientoHistoria {
+    display: grid;
+    grid-template-areas: "foto" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .renacimientoHistoria a {
+      grid-area: foto;
+      align-self: center; }
+    .renacimientoHistoria p {
+      grid-area: texto;
+      align-self: center;
+      font-size: 14px; }
+    .renacimientoHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .finDelCamino {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .finDelCamino a {
+      grid-area: imagen; }
+    .finDelCamino p {
+      grid-area: texto;
+      display: inline-block;
+      margin: 5px;
+      font-size: 14px; }
+    .finDelCamino img {
+      width: 100%;
+      height: 100%; } }
+
+@media only screen and (min-width: 321px) and (max-width: 599px) {
+  .tituloHistoria {
+    font-size: 30px; }
+  h2 {
+    font-size: 20px;
+    text-align: center; }
+  .nav.justify-content-center li {
+    font-size: 18px;
+    font-weight: 700; }
+  .comienzoHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto" "aside";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .comienzoHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .comienzoHistoria p {
+      grid-area: texto;
+      font-size: 18px; }
+    .comienzoHistoria .historiaBowieTexto {
+      padding-bottom: 0; }
+    .comienzoHistoria img {
+      width: 90%;
+      height: 90%; }
+    .comienzoHistoria aside {
+      grid-area: aside;
+      align-self: center; }
+    .comienzoHistoria .bonusHistoria p {
+      width: 100%;
+      font-size: 18px; }
+  .ziggyStardustHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .ziggyStardustHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .ziggyStardustHistoria p {
+      grid-area: texto;
+      align-self: center;
+      font-size: 18px; }
+    .ziggyStardustHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .epocaOscuraHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .epocaOscuraHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .epocaOscuraHistoria p {
+      grid-area: texto;
+      align-self: center;
+      font-size: 18px; }
+    .epocaOscuraHistoria img {
+      width: 100%;
+      height: 100%; }
+  .renacimientoHistoria {
+    display: grid;
+    grid-template-areas: "foto" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .renacimientoHistoria a {
+      grid-area: foto;
+      align-self: center; }
+    .renacimientoHistoria p {
+      grid-area: texto;
+      align-self: center;
+      display: inline-block;
+      font-size: 18px; }
+    .renacimientoHistoria img {
+      width: 100%;
+      height: 100%; }
+  .finDelCamino {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .finDelCamino a {
+      grid-area: imagen; }
+    .finDelCamino p {
+      grid-area: texto;
+      display: inline-block;
+      margin-bottom: 30px;
+      font-size: 18px; }
+    .finDelCamino img {
+      width: 100%;
+      height: 100%; } }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .tituloHistoria {
+    font-size: 35px; }
+  h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 5px; }
+  .nav.justify-content-center li {
+    font-size: 20px;
+    font-weight: 700; }
+  .comienzoHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto" "aside";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .comienzoHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .comienzoHistoria p {
+      grid-area: texto; }
+    .comienzoHistoria .historiaBowieTexto {
+      padding-bottom: 0; }
+    .comienzoHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+    .comienzoHistoria aside {
+      grid-area: aside;
+      align-self: center; }
+      .comienzoHistoria aside p {
+        width: 100%; }
+  .ziggyStardustHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .ziggyStardustHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .ziggyStardustHistoria p {
+      grid-area: texto;
+      align-self: center; }
+    .ziggyStardustHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .epocaOscuraHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .epocaOscuraHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .epocaOscuraHistoria p {
+      grid-area: texto;
+      align-self: center; }
+    .epocaOscuraHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .renacimientoHistoria {
+    display: grid;
+    grid-template-areas: "foto" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .renacimientoHistoria a {
+      grid-area: foto;
+      align-self: center; }
+    .renacimientoHistoria p {
+      grid-area: texto;
+      align-self: center;
+      display: inline-block;
+      margin: 5px; }
+    .renacimientoHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .finDelCamino {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .finDelCamino a {
+      grid-area: imagen; }
+    .finDelCamino p {
+      grid-area: texto;
+      display: inline-block;
+      margin: 5px;
+      margin-bottom: 30px; }
+    .finDelCamino img {
+      width: 100%;
+      height: 100%; } }
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+  .tituloHistoria {
+    font-size: 40px; }
+  h2 {
+    font-size: 24px;
+    text-align: center; }
+  .nav.justify-content-center li {
+    font-size: 22px;
+    font-weight: 700; }
+  .comienzoHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto" "aside";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .comienzoHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .comienzoHistoria p {
+      grid-area: texto;
+      font-size: 22px; }
+    .comienzoHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px;
+      padding-left: 80px;
+      padding-right: 80px; }
+    .comienzoHistoria .historiaBowieTexto {
+      padding-bottom: 0; }
+    .comienzoHistoria aside {
+      grid-area: aside;
+      align-self: center; }
+      .comienzoHistoria aside p {
+        width: 100%;
+        font-size: 22px; }
+  .ziggyStardustHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .ziggyStardustHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .ziggyStardustHistoria p {
+      grid-area: texto;
+      align-self: center;
+      font-size: 22px; }
+    .ziggyStardustHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .epocaOscuraHistoria {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .epocaOscuraHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .epocaOscuraHistoria p {
+      grid-area: texto;
+      align-self: center;
+      font-size: 22px;
+      width: 90%; }
+    .epocaOscuraHistoria img {
+      width: 100%;
+      height: 100%; }
+  .renacimientoHistoria {
+    display: grid;
+    grid-template-areas: "foto" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .renacimientoHistoria a {
+      grid-area: foto;
+      align-self: center; }
+    .renacimientoHistoria p {
+      grid-area: texto;
+      align-self: center;
+      display: inline-block;
+      margin: 5px;
+      font-size: 22px; }
+    .renacimientoHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px; }
+  .finDelCamino {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .finDelCamino a {
+      grid-area: imagen; }
+    .finDelCamino p {
+      grid-area: texto;
+      display: inline-block;
+      margin: 5px;
+      margin-bottom: 30px;
+      font-size: 22px; }
+    .finDelCamino img {
+      width: 100%;
+      height: 100%; } }
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .tituloHistoria {
+    font-size: 40px; }
+  h2 {
+    font-size: 25px;
+    text-align: center; }
+  .comienzoHistoria {
+    display: grid;
+    grid-template-areas: "imagen aside" "texto aside";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; }
+    .comienzoHistoria a {
+      grid-area: imagen;
+      align-self: center; }
+    .comienzoHistoria p {
+      grid-area: texto; }
+    .comienzoHistoria .historiaBowieTexto {
+      padding-bottom: 0; }
+    .comienzoHistoria img {
+      width: 100%;
+      height: 100%;
+      margin: 5px;
+      padding-left: 80px;
+      padding-right: 80px; }
+    .comienzoHistoria aside {
+      grid-area: aside;
+      align-self: center; }
+      .comienzoHistoria aside p {
+        width: 100%; }
+  .finDelCamino {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .finDelCamino a {
+      grid-area: imagen; }
+    .finDelCamino p {
+      grid-area: texto;
+      display: inline-block;
+      margin: 5px;
+      margin-bottom: 30px;
+      font-size: 22px; }
+    .finDelCamino img {
+      width: 100%;
+      height: 100%; } }
+
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+  .finDelCamino {
+    display: grid;
+    grid-template-areas: "imagen" "texto";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    .finDelCamino a {
+      grid-area: imagen; }
+    .finDelCamino p {
+      grid-area: texto;
+      display: inline-block;
+      margin: 5px;
+      margin-bottom: 30px;
+      font-size: 22px; }
+    .finDelCamino img {
+      width: 100%;
+      height: 100%; } }
+
+/*** Variables Colores ***/
+body {
+  background: #fcfcfc;
+  transition: .5s ease all; }
+  body.dark {
+    background: #000004; }
+
+.carousel-caption .tituloHome {
+  text-align: center;
+  text-decoration: none;
+  padding: 30px;
+  font-size: 45px; }
+
+.linkHome {
+  animation: fadeInUp;
+  animation-duration: 1.5s;
+  text-decoration: none;
+  color: transparent;
+  background: linear-gradient(to left, #1216ff, #ff1919);
+  -webkit-background-clip: text; }
+  .linkHome:hover {
+    text-decoration: none;
+    color: transparent;
+    background: linear-gradient(to left, #9394ff, #ff6f6f);
+    -webkit-background-clip: text; }
+
+.home {
+  text-align: center;
+  font-style: italic;
+  text-decoration: none;
+  grid-area: banner; }
+  .home img {
+    animation: fadeIn;
+    animation-duration: 1.4s;
+    width: 100%;
+    height: 75%; }
+
+@media only screen and (max-width: 320px) {
+  .tituloHome {
+    font-size: 20px; } }
+
+@media only screen and (min-width: 321px) and (max-width: 599px) {
+  .navbar-brand {
+    width: 80px; }
+  .tituloHome {
+    font-size: 25px; }
+  .home img {
+    width: 100%;
+    height: 100%; } }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .navbar-brand {
+    width: 100px; }
+  header nav {
+    grid-area: barra;
+    align-self: center;
+    margin: 5px;
+    display: inline; }
+  .home img {
+    width: 100%;
+    height: 100%; } }
+
+@media only screen and (min-width: 769px) and (max-width: 1300px) {
+  div.header__logo img {
+    align-self: center;
+    max-width: 200px;
+    justify-content: start; }
+  .navbar-brand {
+    width: 120px; }
+  .home img {
+    width: 100%;
+    height: 70%; }
+  .carousel-caption .tituloHome {
+    padding-bottom: 10px;
+    font-size: 40px; } }
+
+/*** Variables Colores ***/
+body {
+  background: #fcfcfc;
+  transition: .5s ease all; }
+  body.dark {
+    background: #000004; }
+
+.nav-link {
+  animation: fadeInUp;
+  animation-duration: 1.5s;
+  font-weight: 700; }
+
+.container {
+  animation: fadeInUp;
+  animation-duration: 1.5s; }
+
+.makeup__titulo {
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
+  -webkit-background-clip: text; }
+
+.makeups {
+  text-align: center; }
+  .makeups .makeup__titulo {
+    padding-top: 30px;
+    font-size: 45px; }
+  .makeups h2 {
+    padding: 20px;
+    font-size: 35px;
+    animation: fadeInUp;
+    animation-duration: 1.5s; }
+
+.makeup__subTitulo1 {
+  color: #df2d62; }
+
+.makeup__subTitulo2 {
+  color: #e2494b; }
+
+.makeup__subTitulo3 {
+  color: #a5a8b2; }
+
+.makeup__subTitulo4 {
+  color: #926047; }
+
+.makeup__subTitulo5 {
+  color: #bad4e5; }
+
+@media only screen and (max-width: 320px) {
+  .makeups .makeup__titulo {
+    font-size: 25px;
+    padding-top: 20px; }
+  .makeups h2 {
+    font-size: 22px; } }
+
+@media only screen and (min-width: 321px) and (max-width: 599px) {
+  .makeup__titulo {
+    font-size: 30px;
+    padding-top: 20px; }
+  .makeups h2 {
+    font-size: 24px; } }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .makeups .makeup__titulo {
+    font-size: 35px; }
+  .makeups h2 {
+    font-size: 25px; } }
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .makeups .makeup__titulo {
+    font-size: 40px; }
+  .makeups h2 {
+    font-size: 30px; } }
+
+/*** Variables Colores ***/
+/*** Variables Colores ***/
+body {
+  background: #fcfcfc;
+  transition: .5s ease all; }
+  body.dark {
+    background: #000004; }
+
+.container {
+  animation: fadeInUp;
+  animation-duration: 1.5s; }
+
+.vestimenta__titulo {
+  font-style: italic;
+  text-align: center; }
+
+.nav.flex-column {
+  animation: fadeInDown;
+  animation-duration: 1.5s;
+  font-size: 24px;
+  padding: 50px;
+  font-weight: 700; }
+
+.vestimentas {
+  text-align: center; }
+  .vestimentas .vestimenta__titulo {
+    font-size: 45px;
+    color: transparent;
+    background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
+    -webkit-background-clip: text;
+    padding-top: 30px; }
+  .vestimentas h2 {
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+    padding: 30px;
+    font-size: 35px; }
+
+.vestimenta__subTitulo1 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #bad4e5;
+  padding-top: 20px;
+  padding-bottom: 10px; }
+
+.vestimenta__subTitulo2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #df2d62; }
+
+.vestimenta__subTitulo3 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #3264bb; }
+
+.vestimenta__subTitulo4 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #878787; }
+
+.vestimenta__subTitulo5 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #b40114; }
+
+@media only screen and (max-width: 320px) {
+  .vestimentas .vestimenta__titulo {
+    font-size: 25px;
+    padding-top: 20px; }
+  .vestimentas h2 {
+    font-size: 22px; } }
+
+@media only screen and (min-width: 321px) and (max-width: 599px) {
+  .vestimentas .vestimenta__titulo {
+    font-size: 30px;
+    padding-top: 20px; }
+  .vestimentas h2 {
+    font-size: 24px; } }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .vestimentas .vestimenta__titulo {
+    font-size: 35px; }
+  .vestimentas h2 {
+    font-size: 25px; } }
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .vestimentas .vestimenta__titulo {
+    font-size: 40px; }
+  .vestimentas h2 {
+    font-size: 30px; } }
+
+/*** Variables Colores ***/
+.switch {
+  text-align: center;
+  background: #4b65b2;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none; }
+  .switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 7px 2px 2px rgba(0, 0, 0, 0.2); }
+  .switch.active {
+    background: #d92d29;
+    color: #000; }
+    .switch.active::after {
+      right: 0;
+      left: unset; }
+  .switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff; }

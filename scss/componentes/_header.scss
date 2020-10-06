@@ -1,0 +1,40 @@
+@import "./componentes/variables";
+
+
+.navbar{
+    font-size: 18px;
+    font-weight: 700;
+    background: $colorBlanco;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: .3s ease all;
+    box-shadow: $sombraDark;
+
+        body.dark & {
+            background: $grisOscuro;
+            box-shadow: $sombraLight;
+            i{
+                color: $colorBlanco;                
+            }
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        nav {
+            align-self: center;
+            margin: 5px;
+            display: inline;
+        }
+}
+
+.nav-link {
+    padding: 5px;
+    margin: 10px;
+}
+#navbarNav{
+    text-align: center;
+}

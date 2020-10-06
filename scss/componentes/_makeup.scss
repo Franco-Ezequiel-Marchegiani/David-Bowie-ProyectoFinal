@@ -1,0 +1,99 @@
+@import "./componentes/variables";
+@mixin animacion {
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+}
+//      *** DarkMode ***
+body{
+    background: $colorBlanco;
+    transition: .5s ease all;
+
+    &.dark {
+        background: $colorNegro;
+    }
+}
+//      *** MakeUp ***
+.nav-link{
+    @include animacion;
+    font-weight: 700;
+}
+.container {
+    @include animacion;
+}
+
+.makeup__titulo {
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
+    -webkit-background-clip: text;
+}
+
+.makeups {
+    text-align: center;
+        .makeup__titulo {
+        padding-top: 30px;
+        font-size:$titulo-computadora;
+    }
+        h2 {
+        padding: 20px;
+        font-size: $titulo-tablet-chica;
+        animation: fadeInUp;
+        animation-duration: 1.5s;
+    }    
+}
+.makeup__subTitulo1 {color: $colorZiggy;}
+.makeup__subTitulo2 {color: $colorAladdin;}
+.makeup__subTitulo3 {color: $colorScaryMonsters;}
+.makeup__subTitulo4 {color: $colorLabyrinth;}
+.makeup__subTitulo5 {color: $colorHunkyDory;}
+//    ***Mobile 320px A px  ***
+@media only screen and (max-width:320px){
+        .makeups{
+                .makeup__titulo{
+                    font-size: $titulo-celular-pequeño;
+                    padding-top: 20px;
+            }            
+                h2 {
+                font-size: $subTitulo-tablet-horizontal;
+            }
+        }
+} 
+//    ***Mobile 320px A px Fin ***
+//    ***Mobile 321px A 599px  ***
+@media only screen and (min-width:321px) and (max-width:599px){
+        .makeup__titulo {
+            font-size: $titulo-celular-horizontal;
+            padding-top: 20px;
+        }
+        .makeups{
+            h2{
+                font-size: $subTitulo-computadora;
+            }       
+        }
+} 
+//    ***Mobile 321px A 599px Fin ***
+//    ***Mobile 600px A 768px  ***
+@media only screen and (min-width:600px) and (max-width:768px){
+        .makeups{
+                .makeup__titulo{
+                    font-size: $titulo-tablet-chica;
+            }
+                h2{
+                    font-size: $titulo-celular-pequeño;
+            }        
+    }
+}
+//        ***Mobile 600px A 768px Fin ***
+//      *** Mobile 769px A 1200px  ***
+@media only screen and (min-width:769px) and (max-width:1200px){
+
+        .makeups{
+            .makeup__titulo{
+                font-size: $titulo-tablet-horizontal;
+            }
+            h2{
+                font-size: $titulo-celular-horizontal;
+            }        
+        }
+}
+//      *** Mobile 769px A 1200px Fin ***

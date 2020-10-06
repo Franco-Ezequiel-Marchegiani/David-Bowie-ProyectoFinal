@@ -1,0 +1,128 @@
+@import "./componentes/variables";
+@mixin animacionArriba {
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+}
+@mixin animacionAbajo {
+    animation: fadeInDown;
+    animation-duration: 1.5s;
+}
+@mixin vestimentaSubtitulo{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+//      *** DarkMode ***
+body{
+    background: $colorBlanco;
+    transition: .5s ease all;
+
+    &.dark {
+        background: $colorNegro;
+    }
+}
+//      *** Vestimenta ***
+.container {
+    @include animacionArriba;
+}
+.vestimenta__titulo {
+    font-style: italic;
+    text-align: center;
+}
+.nav.flex-column {
+    @include animacionAbajo
+    font-size: 24px;
+    padding: 50px;
+    font-weight: 700;
+}
+.vestimentas {
+    text-align: center;
+        .vestimenta__titulo {
+        font-size:$titulo-computadora;
+        color: transparent;
+        background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
+        -webkit-background-clip: text;
+        padding-top: 30px;
+        }
+            h2 {
+                @include animacionArriba
+                padding: 30px;
+                font-size: $titulo-tablet-chica;
+        }
+}
+.vestimenta__subTitulo1 {
+    @include vestimentaSubtitulo;
+    color: $colorHunkyDory;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.vestimenta__subTitulo2 {
+    @include vestimentaSubtitulo;
+    color: $colorZiggy;
+}
+
+.vestimenta__subTitulo3 {
+    @include vestimentaSubtitulo;
+    color: $colorDiamonDogs;
+}
+
+.vestimenta__subTitulo4 {
+    @include vestimentaSubtitulo;
+    color: $colorStationToStation;
+}
+
+.vestimenta__subTitulo5 {
+    @include vestimentaSubtitulo;    
+    color: $colorUnionJacket;
+}
+//    ***Mobile 320px A px  ***
+@media only screen and (max-width:320px){
+        .vestimentas{
+            .vestimenta__titulo{
+            font-size: $titulo-celular-pequeño;
+            padding-top: 20px;
+            }
+                h2 {
+                font-size: $subTitulo-tablet-horizontal;
+            }
+        }        
+    } 
+//    ***Mobile 320px A px Fin ***
+//    ***Mobile 321px A 599px  ***
+@media only screen and (min-width:321px) and (max-width:599px){
+        .vestimentas{
+        .vestimenta__titulo{
+            font-size: $titulo-celular-horizontal;
+            padding-top: 20px;
+            } 
+                h2 {
+                font-size: $subTitulo-computadora;
+            }
+        }
+    } 
+//    ***Mobile 321px A 599px Fin ***
+//    ***Mobile 600px A 768px  ***
+@media only screen and (min-width:600px) and (max-width:768px){
+        .vestimentas{
+            .vestimenta__titulo{
+                font-size: $titulo-tablet-chica;
+            }
+                h2{
+                    font-size: $titulo-celular-pequeño;    
+            }       
+        }
+}
+//      ***Mobile 600px A 768px Fin ***
+//      ***Mobile 769px A 1200px ***
+@media only screen and (min-width:769px) and (max-width:1200px){
+
+        .vestimentas{
+            .vestimenta__titulo{
+                font-size: $titulo-tablet-horizontal;
+            }
+                h2{
+                    font-size: $titulo-celular-horizontal;    
+            }       
+        }
+}
+//      ***Mobile 769px A 1200px Fin ***

@@ -1,0 +1,115 @@
+@import "./componentes/variables";
+@mixin animacionArriba {
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+}
+@mixin animacion {
+    animation: fadeIn;
+    animation-duration: 1.4s;
+}
+body{
+    background: $colorBlanco;
+    transition: .5s ease all;
+    &.dark {
+        background: $colorNegro;
+    }
+}
+.carousel-caption{
+        .tituloHome {
+            text-align: center;
+            text-decoration: none;
+            padding: 30px;
+            font-size: $titulo-computadora;
+        }
+}
+.linkHome {
+    @include animacionArriba;
+    text-decoration: none;
+    color: transparent;
+    background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25));
+    -webkit-background-clip: text;
+        &:hover {
+        text-decoration: none;
+        color: transparent;
+        background: linear-gradient(to left, rgb(147, 148, 255), rgb(255, 111, 111));
+        -webkit-background-clip: text;
+        }
+}
+.home {
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+    grid-area: banner;
+        img {
+            @include animacion;
+            width: 100%;
+            height: 75%;
+        }
+}
+
+//      *** Home Mobile 320px  *** 
+@media only screen and (max-width:320px) {
+    .tituloHome {
+        font-size: 20px;
+    }
+}
+//      *** Home Mobile 320px  FIN***
+//      *** Home Mobile 321px A 599px ***
+@media only screen and (min-width:321px) and (max-width: 599px) {
+    .navbar-brand {
+        width: 80px;
+    }
+    .tituloHome {
+        font-size: 25px;
+    }
+    .home{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+}
+//      *** Home Mobile 321px A 599px FIN*** 
+//      *** Home Mobile 600px A 768px  ***
+@media only screen and (min-width:600px) and (max-width:768px) {
+    .navbar-brand {
+        width: 100px;
+    }
+    header nav {
+        grid-area: barra;
+        align-self: center;
+        margin: 5px;
+        display: inline;
+    }
+    .home {
+            img{
+                width: 100%;
+                height: 100%;
+            }        
+        }
+}
+//      *** Home Mobile 600px A 768px  FIN***
+//      *** Home Mobile 769px A 1300px ***
+@media only screen and (min-width:769px) and (max-width:1300px){
+        div.header__logo img {
+        align-self: center;
+        max-width: 200px;
+        justify-content: start;
+        }
+        .navbar-brand {
+            width: 120px;
+        }
+        .home {
+                img{
+                    width: 100%;
+                    height: 70%;
+                }    
+        }
+        .carousel-caption{
+            .tituloHome {
+                padding-bottom: 10px;
+                font-size: $titulo-tablet-horizontal;
+            }
+        }
+}
+//      *** Home Mobile 769px A 1300px FIN***
