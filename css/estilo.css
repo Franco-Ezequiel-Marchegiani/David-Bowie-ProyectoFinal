@@ -1153,7 +1153,7 @@ h2 {
 /*** Variables Colores ***/
 body {
   background: #fcfcfc;
-  transition: .5s ease all; }
+  transition: 0.4s ease all; }
   body.dark {
     background: #000004; }
 
