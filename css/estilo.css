@@ -267,10 +267,14 @@ footer {
   grid-template-areas: "descripcion bowie misRedes";
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr; }
+  footer p {
+    font-size: 18px; }
   footer li {
     list-style: none; }
   footer .fab {
-    padding-right: 85px; }
+    padding: 15px;
+    padding-top: 25px;
+    font-size: 60px; }
   footer .fa-instagram {
     color: #fcfcfc; }
     footer .fa-instagram:hover {
@@ -299,29 +303,31 @@ footer {
   color: black;
   padding-bottom: 10px; }
   .descripcion__footer .footer__imagen {
-    width: 150px;
+    width: 125px;
     align-self: center;
     padding-top: 20px; }
-  .descripcion__footer .texto__Footer {
-    font-size: 22px; }
 
 .redes__bowie {
   text-align: center;
-  grid-area: bowie;
-  font-size: 150px;
-  align-self: center; }
+  grid-area: bowie; }
   .redes__bowie p {
-    font-size: 24px;
+    font-size: 22px;
     color: black; }
+  .redes__bowie .titulo__footer {
+    padding-top: 50px;
+    align-self: start;
+    font-size: 40px; }
 
 .mis__redes {
   text-align: center;
-  grid-area: misRedes;
-  font-size: 100px;
-  align-self: center; }
+  grid-area: misRedes; }
   .mis__redes p {
     font-size: 22px;
     color: black; }
+  .mis__redes .titulo__footer {
+    padding-top: 50px;
+    align-self: start;
+    font-size: 40px; }
 
 /*** Footer Mobile Home 320px ***/
 @media only screen and (max-width: 320px) {
@@ -330,18 +336,17 @@ footer {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr; }
     footer p {
-      font-size: 14px;
-      padding-top: 20px; }
-    footer a {
-      padding-left: 50px; }
+      font-size: 14px; }
+    footer .fab {
+      font-size: 50px; }
   .descripcion__footer {
     grid-area: descripcion;
     align-self: center;
     text-align: center;
     padding-bottom: 10px;
     color: black; }
-    .descripcion__footer img {
-      width: 30%;
+    .descripcion__footer .footer__imagen {
+      width: 80px;
       align-self: center;
       padding-top: 20px; }
   .redes__bowie {
@@ -349,13 +354,15 @@ footer {
     grid-area: bowie;
     font-size: 40px;
     align-self: center; }
-    .redes__bowie p {
-      font-size: 24px; }
+    .redes__bowie .titulo__footer {
+      font-size: 22px; }
   .mis__redes {
     text-align: center;
     grid-area: misRedes;
     font-size: 40px;
-    align-self: center; } }
+    align-self: center; }
+    .mis__redes .titulo__footer {
+      font-size: 22px; } }
 
 @media only screen and (min-width: 321px) and (max-width: 599px) {
   footer {
@@ -365,8 +372,8 @@ footer {
     footer p {
       font-size: 16px;
       padding-top: 20px; }
-    footer a {
-      padding-left: 50px; }
+    footer .fab {
+      font-size: 60px; }
   .descripcion__footer {
     grid-area: descripcion;
     align-self: center;
@@ -375,8 +382,8 @@ footer {
     color: black; }
     .descripcion__footer .texto__Footer {
       font-size: 18px; }
-    .descripcion__footer img {
-      width: 38%;
+    .descripcion__footer .footer__imagen {
+      width: 120px;
       align-self: center;
       padding-top: 20px; }
   .redes__bowie {
@@ -386,62 +393,68 @@ footer {
     align-self: center; }
     .redes__bowie p {
       font-size: 18px; }
+    .redes__bowie .titulo__footer {
+      font-size: 25px; }
   .mis__redes {
     text-align: center;
     grid-area: misRedes;
     font-size: 60px;
     align-self: center; }
     .mis__redes p {
-      font-size: 18px; } }
+      font-size: 18px; }
+    .mis__redes .titulo__footer {
+      font-size: 25px; } }
 
-footer {
-  grid-template-areas: "descripcion" "bowie" "misRedes";
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr; }
-  footer p {
-    font-size: 18px;
-    padding-top: 20px; }
-  footer a {
-    padding-left: 50px; }
-
-.descripcion__footer {
-  grid-area: descripcion;
-  align-self: center;
-  text-align: center;
-  padding-bottom: 10px;
-  color: black; }
-  .descripcion__footer .texto__Footer {
-    font-size: 18px; }
-  .descripcion__footer img {
-    width: 40%;
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  footer {
+    grid-template-areas: "descripcion" "bowie" "misRedes";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; }
+    footer p {
+      font-size: 18px;
+      padding-top: 20px; }
+  .descripcion__footer {
+    grid-area: descripcion;
     align-self: center;
-    padding-top: 20px; }
+    text-align: center;
+    padding-bottom: 10px;
+    color: black; }
+    .descripcion__footer .texto__Footer {
+      font-size: 18px; }
+    .descripcion__footer img {
+      align-self: center;
+      padding-top: 20px; }
+  .redes__bowie {
+    text-align: center;
+    grid-area: bowie;
+    font-size: 60px;
+    align-self: center; }
+    .redes__bowie p {
+      font-size: 18px; }
+    .redes__bowie .titulo__footer {
+      font-size: 30px; }
+  .mis__redes {
+    text-align: center;
+    grid-area: misRedes;
+    font-size: 60px;
+    align-self: center; }
+    .mis__redes p {
+      font-size: 18px; }
+    .mis__redes .titulo__footer {
+      font-size: 30px; } }
 
-.redes__bowie {
-  text-align: center;
-  grid-area: bowie;
-  font-size: 60px;
-  align-self: center; }
-  .redes__bowie p {
-    font-size: 18px; }
-
-.mis__redes {
-  text-align: center;
-  grid-area: misRedes;
-  font-size: 60px;
-  align-self: center; }
-  .mis__redes p {
-    font-size: 18px; }
-
-@media only screen and (min-width: 769px) and (max-width: 2100px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
   footer {
     grid-template-areas: "descripcion bowie misRedes";
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr; }
     footer p {
       padding-top: 20px; }
-    footer a {
-      padding-left: 50px; }
+    footer .fab {
+      padding: 15px;
+      padding-top: 90px;
+      padding-right: 10px;
+      font-size: 55px; }
   .descripcion__footer {
     grid-area: descripcion;
     align-self: center;
@@ -449,26 +462,29 @@ footer {
     padding-bottom: 10px;
     color: black; }
     .descripcion__footer img {
-      width: 55%;
       align-self: center;
       padding-top: 20px; }
     .descripcion__footer .texto__Footer {
       font-size: 22px; }
   .redes__bowie {
     text-align: center;
-    grid-area: bowie;
-    font-size: 75px;
-    align-self: center; }
+    grid-area: bowie; }
     .redes__bowie p {
       font-size: 22px;
       color: black; }
+    .redes__bowie .titulo__footer {
+      padding-top: 50px;
+      align-self: start;
+      font-size: 35px; }
   .mis__redes {
     text-align: center;
-    grid-area: misRedes;
-    font-size: 75px;
-    align-self: center; }
+    grid-area: misRedes; }
     .mis__redes p {
-      font-size: 22px; } }
+      font-size: 22px; }
+    .mis__redes .titulo__footer {
+      padding-top: 50px;
+      align-self: start;
+      font-size: 35px; } }
 
 /*** Variables Colores ***/
 .navbar {
@@ -1181,22 +1197,25 @@ body {
   font-style: italic;
   text-decoration: none;
   grid-area: banner; }
-  .home img {
+  .home .imagen_home {
     animation: fadeIn;
     animation-duration: 1.4s;
     width: 100%;
-    height: 75%; }
+    height: 700px; }
 
 @media only screen and (max-width: 320px) {
   .tituloHome {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .home .imagen_home {
+    width: 100%;
+    height: 100%; } }
 
 @media only screen and (min-width: 321px) and (max-width: 599px) {
   .navbar-brand {
     width: 80px; }
   .tituloHome {
     font-size: 25px; }
-  .home img {
+  .home .imagen_home {
     width: 100%;
     height: 100%; } }
 
@@ -1208,18 +1227,18 @@ body {
     align-self: center;
     margin: 5px;
     display: inline; }
-  .home img {
+  .home .imagen_home {
     width: 100%;
     height: 100%; } }
 
-@media only screen and (min-width: 769px) and (max-width: 1300px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
   div.header__logo img {
     align-self: center;
     max-width: 200px;
     justify-content: start; }
   .navbar-brand {
     width: 120px; }
-  .home img {
+  .home .imagen_home {
     width: 100%;
     height: 70%; }
   .carousel-caption .tituloHome {
