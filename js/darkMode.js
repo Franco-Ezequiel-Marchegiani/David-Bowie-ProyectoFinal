@@ -3,7 +3,6 @@ const btnSwitch = document.querySelector('#switch');
 btnSwitch.addEventListener('click', e => {
     document.body.classList.toggle('dark');
     btnSwitch.classList.toggle('active');
-
     // Guarda el modo en el localStorage.
     if(document.body.classList.contains('dark')){
         localStorage.setItem('dark-mode', 'true');
@@ -11,7 +10,6 @@ btnSwitch.addEventListener('click', e => {
         localStorage.setItem('dark-mode', 'false');
     }
 });
-
 // Modo actual en el que estamos
 if(localStorage.getItem('dark-mode') === 'true'){
     document.body.classList.add('dark');

@@ -111,28 +111,6 @@ body {
     body.dark .subTituloDisco {
       color: #fcfcfc; }
 
-.discos {
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-around; }
-
-.card {
-  animation: fadeInUp;
-  animation-duration: 1.5s;
-  margin-bottom: 50px;
-  background: #fcfcfc;
-  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
-  transition: .3s ease all; }
-  body.dark .card {
-    background: #222222;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16); }
-    body.dark .card .card-title {
-      color: #fcfcfc; }
-    body.dark .card .card-text {
-      color: #fcfcfc; }
-
 .tituloDiscos {
   text-align: center; }
   .tituloDiscos h1 {
@@ -148,111 +126,150 @@ body {
     font-size: 24px;
     padding: 30px; }
 
-.discos img {
-  width: 550px;
-  height: 550px;
-  margin-bottom: 20px;
-  border: 1px solid;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
-  .discos img:hover {
-    transform: scale(1.01, 1.01);
-    border: 1px solid black; }
+.discos {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around; }
+  .discos .card {
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+    margin-bottom: 50px;
+    background: #fcfcfc;
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+    transition: .3s ease all; }
+    .discos .card img {
+      width: 475px;
+      height: 475px;
+      margin-bottom: 20px;
+      border: 1px solid;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+      .discos .card img:hover {
+        transform: scale(1.01, 1.01);
+        border: 1px solid black; }
+    body.dark .discos .card {
+      background: #222222;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16); }
+    .discos .card .card-title {
+      color: #fcfcfc; }
+    .discos .card .card-text {
+      color: #fcfcfc; }
 
 @media only screen and (max-width: 320px) {
+  .tituloDiscos h1 {
+    font-size: 25px;
+    padding: 20px; }
+  .tituloDiscos h2 {
+    font-size: 16px; }
   .discos {
     display: grid;
     grid-template-areas: "titulo" "link" "subtitulo";
     grid-template-rows: 1fr;
     grid-template-columns: 100%;
-    padding: 20px; }
-    .discos a {
+    padding: 30px; }
+    .discos .card a {
       grid-area: link;
       width: 100%; }
-    .discos h2 {
+    .discos .card h2 {
       grid-area: titulo;
       font-size: 16px;
       margin: 20px; }
-    .discos h3 {
+    .discos .card h5 {
       grid-area: subtitulo;
-      font-size: 12px;
+      font-size: 16px;
       margin: 5px; }
-    .discos img {
+    .discos .card p {
+      font-size: 12px; }
+    .discos .card img {
       width: 100%;
       height: 100%;
-      align-self: center; }
-  .tituloDiscos h1 {
-    font-size: 25px;
-    padding: 20px; }
-  .tituloDiscos h2 {
-    font-size: 16px; } }
+      align-self: center; } }
 
 @media only screen and (min-width: 321px) and (max-width: 599px) {
-  .discos {
-    display: grid;
-    grid-template-areas: "titulo" "link" "subtitulo";
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    padding: 50px; }
-    .discos a {
-      grid-area: link;
-      width: 100%; }
-    .discos h2 {
-      grid-area: titulo;
-      font-size: 18px;
-      margin: 20px; }
-    .discos h3 {
-      grid-area: subtitulo;
-      font-size: 14px;
-      margin: 5px; }
-    .discos img {
-      width: 100%;
-      height: 100%;
-      align-self: center; }
   .tituloDiscos h1 {
     font-size: 30px; }
   .tituloDiscos h2 {
-    font-size: 18px; } }
-
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+    font-size: 18px; }
   .discos {
     display: grid;
     grid-template-areas: "titulo" "link" "subtitulo";
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    padding: 50px; }
-    .discos a {
+    padding: 55px; }
+    .discos .card a {
       grid-area: link;
       width: 100%; }
-    .discos h2 {
+    .discos .card h2 {
       grid-area: titulo;
       font-size: 18px;
       margin: 20px; }
-    .discos h3 {
+    .discos .card h5 {
       grid-area: subtitulo;
-      font-size: 14px;
+      font-size: 18px;
       margin: 5px; }
-    .discos img {
+    .discos .card p {
+      font-size: 14px; }
+    .discos .card img {
       width: 100%;
       height: 100%;
-      align-self: center; }
+      align-self: center; } }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
   .tituloDiscos h1 {
     font-size: 35px; }
   .tituloDiscos h2 {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .discos {
+    display: grid;
+    grid-template-areas: "titulo" "link" "subtitulo";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding: 85px; }
+    .discos .card a {
+      grid-area: link;
+      width: 100%; }
+    .discos .card h2 {
+      grid-area: titulo;
+      font-size: 20px;
+      margin: 20px; }
+    .discos .card h5 {
+      grid-area: subtitulo;
+      font-size: 20px;
+      margin: 5px; }
+    .discos .card p {
+      font-size: 16px; }
+    .discos .card img {
+      width: 100%;
+      height: 100%;
+      align-self: center; } }
 
-@media only screen and (min-width: 769px) and (max-width: 1300px) {
-  .discos img {
-    width: 500px;
-    height: 500px;
-    border: 1px solid;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
-  .discos:hover {
-    transform: scale(1.03, 1.03);
-    border: 1px solid black; }
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
   .tituloDiscos h1 {
     font-size: 40px; }
   .tituloDiscos h2 {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .discos .card img {
+    width: 350px;
+    height: 350px;
+    border: 1px solid;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  .discos .card:hover {
+    transform: scale(1.03, 1.03);
+    border: 1px solid black; }
+  .discos .card .card-title {
+    font-size: 16px; }
+  .discos .card .card-text {
+    font-size: 12px; } }
+
+@media only screen and (min-width: 1201px) and (max-width: 1479px) {
+  .discos .card img {
+    width: 375px;
+    height: 375px; }
+  .discos .card .card-title {
+    font-size: 16px; }
+  .discos .card .card-text {
+    font-size: 13px; } }
 
 /*** Variables Colores ***/
 body {
@@ -266,7 +283,7 @@ footer {
   display: grid;
   grid-template-areas: "descripcion bowie misRedes";
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr; }
+  grid-template-columns: 50% 25% 25%; }
   footer p {
     font-size: 18px; }
   footer li {
@@ -447,7 +464,7 @@ footer {
   footer {
     grid-template-areas: "descripcion bowie misRedes";
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr; }
+    grid-template-columns: 40% 30% 30%; }
     footer p {
       padding-top: 20px; }
     footer .fab {
@@ -1252,10 +1269,12 @@ body {
   body.dark {
     background: #000004; }
 
-.nav-link {
+.nav.flex-column {
   animation: fadeInUp;
   animation-duration: 1.5s;
-  font-weight: 700; }
+  font-weight: 700;
+  padding: 50px;
+  font-size: 24px; }
 
 .container {
   animation: fadeInUp;
@@ -1277,6 +1296,10 @@ body {
     font-size: 35px;
     animation: fadeInUp;
     animation-duration: 1.5s; }
+  .makeups .container img {
+    height: 800px;
+    padding-left: 75px;
+    padding-right: 75px; }
 
 .makeup__subTitulo1 {
   color: #df2d62; }
@@ -1294,30 +1317,55 @@ body {
   color: #bad4e5; }
 
 @media only screen and (max-width: 320px) {
+  .nav.flex-column {
+    font-size: 16px; }
   .makeups .makeup__titulo {
     font-size: 25px;
     padding-top: 20px; }
   .makeups h2 {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .makeups .container img {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media only screen and (min-width: 321px) and (max-width: 599px) {
+  .nav.flex-column {
+    font-size: 18px; }
   .makeup__titulo {
     font-size: 30px;
     padding-top: 20px; }
   .makeups h2 {
-    font-size: 24px; } }
+    font-size: 24px; }
+  .makeups .container img {
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px; } }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
+  .nav.flex-column {
+    font-size: 20px; }
   .makeups .makeup__titulo {
     font-size: 35px; }
   .makeups h2 {
-    font-size: 25px; } }
+    font-size: 25px; }
+  .makeups .container img {
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 25px; } }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .nav.flex-column {
+    font-size: 22px; }
   .makeups .makeup__titulo {
     font-size: 40px; }
   .makeups h2 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .makeups .container img {
+    width: 100%;
+    height: 700px;
+    padding-left: 30px;
+    padding-right: 30px; } }
 
 /*** Variables Colores ***/
 /*** Variables Colores ***/
@@ -1355,6 +1403,10 @@ body {
     animation-duration: 1.5s;
     padding: 30px;
     font-size: 35px; }
+  .vestimentas .container img {
+    height: 800px;
+    padding-left: 75px;
+    padding-right: 75px; }
 
 .vestimenta__subTitulo1 {
   padding-top: 20px;
@@ -1384,30 +1436,54 @@ body {
   color: #b40114; }
 
 @media only screen and (max-width: 320px) {
+  .nav.flex-column {
+    font-size: 16px; }
   .vestimentas .vestimenta__titulo {
     font-size: 25px;
     padding-top: 20px; }
   .vestimentas h2 {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .vestimentas .container img {
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px; } }
 
 @media only screen and (min-width: 321px) and (max-width: 599px) {
+  .nav.flex-column {
+    font-size: 18px; }
   .vestimentas .vestimenta__titulo {
     font-size: 30px;
     padding-top: 20px; }
   .vestimentas h2 {
-    font-size: 24px; } }
+    font-size: 24px; }
+  .vestimentas .container img {
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px; } }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
+  .nav.flex-column {
+    font-size: 20px; }
   .vestimentas .vestimenta__titulo {
     font-size: 35px; }
   .vestimentas h2 {
-    font-size: 25px; } }
+    font-size: 25px; }
+  .vestimentas .container img {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .nav.flex-column {
+    font-size: 22px; }
   .vestimentas .vestimenta__titulo {
     font-size: 40px; }
   .vestimentas h2 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .vestimentas .container img {
+    height: 700px;
+    padding-left: 30px;
+    padding-right: 30px; } }
 
 /*** Variables Colores ***/
 .switch {

@@ -28,9 +28,9 @@ body{
     font-style: italic;
     text-align: center;
 }
-.nav.flex-column {
+.nav.flex-column { 
     @include animacionAbajo
-    font-size: 24px;
+    font-size: $subTitulo-computadora;
     padding: 50px;
     font-weight: 700;
 }
@@ -43,10 +43,17 @@ body{
         -webkit-background-clip: text;
         padding-top: 30px;
         }
-            h2 {
-                @include animacionArriba
-                padding: 30px;
-                font-size: $titulo-tablet-chica;
+        h2 {
+            @include animacionArriba
+            padding: 30px;
+            font-size: $titulo-tablet-chica;
+        }
+        .container{
+            img{
+                height:800px;
+                padding-left:75px;
+                padding-right:75px;
+            }
         }
 }
 .vestimenta__subTitulo1 {
@@ -55,28 +62,27 @@ body{
     padding-top: 20px;
     padding-bottom: 10px;
 }
-
 .vestimenta__subTitulo2 {
     @include vestimentaSubtitulo;
     color: $colorZiggy;
 }
-
 .vestimenta__subTitulo3 {
     @include vestimentaSubtitulo;
     color: $colorDiamonDogs;
 }
-
 .vestimenta__subTitulo4 {
     @include vestimentaSubtitulo;
     color: $colorStationToStation;
 }
-
 .vestimenta__subTitulo5 {
     @include vestimentaSubtitulo;    
     color: $colorUnionJacket;
 }
 //    ***Mobile 320px A px  ***
 @media only screen and (max-width:320px){
+    .nav.flex-column{
+        font-size: $subTitulo-celular-pequeño;
+    }
         .vestimentas{
             .vestimenta__titulo{
             font-size: $titulo-celular-pequeño;
@@ -85,11 +91,21 @@ body{
                 h2 {
                 font-size: $subTitulo-tablet-horizontal;
             }
+            .container{
+                img{
+                    height:100%;
+                    padding-left:10px;
+                    padding-right:10px;
+                }
+            }
         }        
     } 
 //    ***Mobile 320px A px Fin ***
 //    ***Mobile 321px A 599px  ***
 @media only screen and (min-width:321px) and (max-width:599px){
+    .nav.flex-column{
+        font-size: $subTitulo-celular-horizontal;
+    }
         .vestimentas{
         .vestimenta__titulo{
             font-size: $titulo-celular-horizontal;
@@ -98,31 +114,57 @@ body{
                 h2 {
                 font-size: $subTitulo-computadora;
             }
+            .container{
+                img{
+                    height:100%;
+                    padding-left:20px;
+                    padding-right:20px;
+                }
+            }
         }
     } 
 //    ***Mobile 321px A 599px Fin ***
 //    ***Mobile 600px A 768px  ***
 @media only screen and (min-width:600px) and (max-width:768px){
+    .nav.flex-column{
+        font-size: $subTitulo-tablet-chica;
+    }
         .vestimentas{
             .vestimenta__titulo{
                 font-size: $titulo-tablet-chica;
             }
-                h2{
-                    font-size: $titulo-celular-pequeño;    
+            h2{
+                font-size: $titulo-celular-pequeño;    
+            }   
+            .container{
+                img{
+                    height:100%;
+                    padding-left:15px;
+                    padding-right:15px;
+                }
             }       
         }
 }
 //      ***Mobile 600px A 768px Fin ***
 //      ***Mobile 769px A 1200px ***
 @media only screen and (min-width:769px) and (max-width:1200px){
-
+    .nav.flex-column{
+        font-size: $subTitulo-tablet-horizontal;
+    }
         .vestimentas{
             .vestimenta__titulo{
                 font-size: $titulo-tablet-horizontal;
             }
-                h2{
-                    font-size: $titulo-celular-horizontal;    
-            }       
+            h2{
+                font-size: $titulo-celular-horizontal;    
+            }
+            .container{
+                img{
+                    height:700px;
+                    padding-left:30px;
+                    padding-right:30px;
+                }
+            }        
         }
 }
 //      ***Mobile 769px A 1200px Fin ***

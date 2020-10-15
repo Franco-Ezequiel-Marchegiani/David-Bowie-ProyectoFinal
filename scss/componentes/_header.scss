@@ -1,6 +1,4 @@
 @import "./componentes/variables";
-
-
 .navbar{
     font-size: 18px;
     font-weight: 700;
@@ -12,7 +10,6 @@
     border-radius: 5px;
     transition: .3s ease all;
     box-shadow: $sombraDark;
-
         body.dark & {
             background: $grisOscuro;
             box-shadow: $sombraLight;
@@ -30,7 +27,6 @@
             display: inline;
         }
 }
-
 .nav-link {
     padding: 5px;
     margin: 10px;
