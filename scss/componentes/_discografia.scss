@@ -29,13 +29,15 @@ body{
                     color: $colorBlanco;    
                     }
                 }
-            }
-            
+            }      
     }
 }
 //      *** Discografía ***
 .tituloDiscos {
     text-align: center;
+        a{
+            text-decoration:none;
+        }
         h1 {
         font-size: $titulo-computadora;
         text-decoration: none;
@@ -43,11 +45,19 @@ body{
         background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
         -webkit-background-clip: text;
         padding-top: 30px;
+            &:hover {
+            text-decoration: none;
+            color: transparent;
+            background: rgb(60,58,180);
+            background: linear-gradient(90deg, rgba(60,58,180,1) 0%, rgba(252,69,69,1) 100%);;
+            -webkit-background-clip: text;
+            }           
         }
         h2 {
         @include animacionAbajo;
         font-size: $subTitulo-computadora;       
         padding: 30px;
+        color: $colorNegro;
         }
 }
 .discos {

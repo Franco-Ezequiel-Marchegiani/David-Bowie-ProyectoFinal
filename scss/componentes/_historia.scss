@@ -10,10 +10,18 @@
 @mixin titulo {
     text-align: center;
     color: transparent;
-    background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
-    -webkit-background-clip: text;
     animation: fadeInDown;
     animation-duration: 2s;
+    font-size: $titulo-computadora;
+    font-style: italic;
+    background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
+    -webkit-background-clip: text;
+        &:hover {
+                color: transparent;
+                background: rgb(60,58,180);
+                background: linear-gradient(90deg, rgba(60,58,180,1) 0%, rgba(252,69,69,1) 100%);;
+                -webkit-background-clip: text;
+        }          
 }
 @mixin colorBarraHistoria {
     background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(255, 55, 96, 1) 100%);
@@ -31,68 +39,36 @@ body{
                 background: $colorNegro;
                 transition: .5s ease all;
             }
-            .subTituloHistoria{
-                color: $colorBlanco;
-            }
-            .historiaBowieTexto{
-                color: $colorBlanco;
-            }
-            .bonusHistoria{
-                    p{
-                       color: $colorBlanco; 
-                    }
-            }
-            .subtituloZiggyHistoria{
-                color: $colorBlanco;
-            }
-            .ziggyStardustHistoria{
-                    p{
-                        color: $colorBlanco;
-                    }
-            }
-            .subtituloEpocaOscuraHistoria{
-                color: $colorBlanco;
-            }
-            .epocaOscuraHistoria{
-                    p{
-                        color: $colorBlanco;
-                    }
-            }
-            .subtituloRenacimientoHistoria{
-                color: $colorBlanco;
-            }
-            .renacimientoHistoria{
-                    p{
-                        color: $colorBlanco;
-                    }
-            }
-            .subtituloFinCaminoHistoria{
-                color: $colorBlanco;
-            }
-            .finDelCamino{
-                    p{
-                        color: $colorBlanco;
-                    }
+            section{
+                p{
+                    color: $colorBlanco;
+                }
             }
     }
 }
 //      *** DarkMode Fin ***
 //      *** Titulos Historia ***
+#tituloLink{
+    text-decoration: none;
+}
 .tituloHistoria {
     @include titulo;
-    font-size: $titulo-computadora;
 }
 h2{
     @include animacionIzquierda
+    color: transparent;
+    background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
+    -webkit-background-clip: text;
+    text-align: center;
     font-size: $titulo-celular-horizontal;
     padding: 40px;
+
 }
 //      *** Titulos Historia Fin ***
 //      *** Barra Historia ***
 .barraHistoria {
     margin: 10px;
-    margin-top: 50px;
-    padding: 40px;
+    padding: 30px;
 }
 .nav.justify-content-center {
     background-color: $colorBlanco;
@@ -114,48 +90,48 @@ h2{
     grid-template-areas: 
     "img aside"
     "p aside";
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr auto;
-        p {
-            grid-area: p;
-            align-self: center;
-            padding: 20px;
-            font-size: $fuente-computadora;
-        }
         a {
+            @include animacionIzquierda
             grid-area: img;
             align-self: center;
-            margin: 20px;
+            padding-left:80px;
+            img{
+                width: 700px;
+                height:700px;              
+            }
+        }
+        p {
+            @include animacionIzquierda
+            grid-area: p;
+            align-self: center;
+            padding-left: 50px;
+            padding-bottom:70px;
+            font-size: $fuente-computadora;   
+            width: 90%;
+            a{
+                padding-left: 0;
+                text-decoration: none;
+            }         
         }
         aside {
             grid-area: aside;
             align-self: center;
-            margin: 50px;
+            padding: 20px;
+            p{
+                @include animacionDerecha
+                width: 620px;
+                padding:50px;
+            }
+            img {
+                @include animacionDerecha
+                width: 600px;
+                height: 800px;
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
-        img {
-            @include animacionIzquierda
-            height: 500px;
-            margin: 5px 20px;
-            padding-left: 80px;
-            padding-right: 80px;
-        }
-        .historiaBowieTexto {
-            @include animacionIzquierda
-            padding-bottom: 500px;
-        }
-}
-.bonusHistoria {
-    p{
-        @include animacionDerecha
-        width: 620px;
-    }
-    img {
-        @include animacionDerecha
-        width: 600px;
-        height: 800px;
-        padding-left: 0;
-        padding-right: 0;
-    }
 }
 .ziggyStardustHistoria {
     display: grid;
@@ -179,6 +155,10 @@ h2{
             @include animacionIzquierda
             display: inline-block;
             overflow: hidden;
+            a{
+                margin: 0;
+                text-decoration: none;
+            }
         }
         img {
             @include animacionDerecha
@@ -206,6 +186,10 @@ h2{
         p {
             @include animacionDerecha
             width: 75%;
+            a{
+                margin: 0;
+                text-decoration: none;
+            }
         }
         img {
             @include animacionIzquierda
@@ -233,6 +217,10 @@ h2{
         p{
             @include animacionIzquierda
             display: inline-block;
+            a{
+                margin: 0;
+                text-decoration: none;
+            }
         }
         img {
             @include animacionDerecha
@@ -260,6 +248,10 @@ h2{
         p{
             @include animacionDerecha;
             display: inline-block;
+            a{
+                margin: 0;
+                text-decoration: none;
+            }
         }
         img {
             @include animacionIzquierda;
@@ -295,28 +287,36 @@ h2{
             a {
                 grid-area: imagen;
                 align-self: center;
+                padding-left:0;
+                    img {
+                    width: 100%;
+                    height: 100%;
+                    padding: 35px;                
+                }
             }
             p {
                 grid-area: texto;
                 font-size: $fuente-celular-pequeño;
+                width:100%;
+                padding: 25px;
             }
             .historiaBowieTexto {
             padding-bottom: 0;
             }
             aside {
-                grid-area: aside;
-                align-self: center;
-            }
-            img {
+            grid-area: aside;
+            align-self: center;
+                img {
                 width: 100%;
                 height: 100%;
-                margin: 5px;
-            }
-    }
-    .bonusHistoria {
-        p{
-            width:100%;
-        }     
+                padding: 20px;
+                padding-bottom:10px;
+                }
+                p{
+                    width:100%;
+                    padding:0px;
+                } 
+            }         
     }
 //      * Ziggy *
     .ziggyStardustHistoria {
@@ -357,10 +357,12 @@ h2{
                 grid-area: texto;
                 align-self: center;
                 font-size: $fuente-celular-pequeño;
+                width: 70%;
             }
             img {
-                width: 250px;
+                width: 100%;
                 height: 100%;
+                padding: 10px;
             }
     }
 //      * Renacimiento *
@@ -383,7 +385,7 @@ h2{
             img {
                 width: 100%;
                 height: 100%;
-                margin: 5px;
+                padding: 10px;
             }
     }
 //      * Fin del Camino *
@@ -400,12 +402,14 @@ h2{
             p {
                 grid-area: texto;
                 display: inline-block;
-                margin: 5px;
+                margin: 0px;
                 font-size: $fuente-celular-pequeño;
+                padding:25px;
             }
             img {
                 width: 100%;
                 height: 100%;
+                padding: 10px;
             }
     }
 }
@@ -437,28 +441,36 @@ h2{
             a {
                 grid-area: imagen;
                 align-self: center;
+                padding-left:0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    padding: 35px;                
+                }
             }
             p {
                 grid-area: texto;
                 font-size: $fuente-celular-horizontal;
+                width:100%;
+                padding: 25px;
             }
             .historiaBowieTexto {
                 padding-bottom: 0;
             }
-            img {
-                width: 90%;
-                height: 90%;
-            }
             aside {
                 grid-area: aside;
                 align-self: center;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        padding: 10px;                
+                    }
+                    p{
+                        width:100%;
+                        font-size: $fuente-celular-horizontal;
+                        padding: 10px;
+                    }
             }
-        .bonusHistoria{
-                p{
-                    width:100%;
-                    font-size: $fuente-celular-horizontal;
-                }
-        }
     }
 //      * Ziggy *
     .ziggyStardustHistoria {
@@ -526,6 +538,7 @@ h2{
             img {
                 width: 100%;
                 height: 100%;
+                padding: 10px;
             }
     }
 //      * Fin del Camino *
@@ -548,6 +561,7 @@ h2{
         img {
             width: 100%;
             height: 100%;
+            padding: 10px;
         }
     }
 } 
@@ -580,21 +594,28 @@ h2{
             a {
                 grid-area: imagen;
                 align-self: center;
+                padding-left:0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    padding: 35px;                
+                }
             }
             p {
                 grid-area: texto;
+                width: 90%;
             }
             .historiaBowieTexto {
                 padding-bottom: 0;
             }
-            img {
-                width: 100%;
-                height: 100%;
-                margin: 5px;
-            }
             aside {
                 grid-area: aside;
                 align-self: center;
+                img {
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+                }
                 p {
                     width: 100%;
                 }
@@ -637,11 +658,12 @@ h2{
             p {
                 grid-area: texto;
                 align-self: center;
+                width: 85%;                
             }
             img {
                 width: 100%;
                 height: 100%;
-                margin: 5px;
+                padding: 10px;
             }
     }
 //      * Renacimiento *
@@ -660,12 +682,12 @@ h2{
                 grid-area: texto;
                 align-self: center;
                 display: inline-block;
-                margin: 5px;
+                padding: 10px;
             }
             img {
                 width: 100%;
                 height: 100%;
-                margin: 5px;
+                padding: 10px;
             }
     }
 //      * Fin del Camino *
@@ -682,12 +704,13 @@ h2{
             p {
                 grid-area: texto;
                 display: inline-block;
-            margin: 5px;
-            margin-bottom: 30px;
+                padding: 10px;
+                margin-bottom: 30px;
             }
             img {
                 width: 100%;
                 height: 100%;
+                padding: 10px;
             }
     }
 }
@@ -719,24 +742,30 @@ h2{
             a {
                 grid-area: imagen;
                 align-self: center;
+                padding-left:0;
+                img {
+                width: 100%;
+                height: 100%;
+                padding: 35px;
+                }
             }
             p {
                 grid-area: texto;
                 font-size: $fuente-tablet-horizontal;
+                width: 92%;
             }
-            img {
-                width: 100%;
-                height: 100%;
-                margin: 5px;
-                padding-left: 80px;
-                padding-right: 80px;
-            }
+            
             .historiaBowieTexto {
                 padding-bottom: 0;
             }
             aside {
                 grid-area: aside;
                 align-self: center;
+                img {
+                width: 100%;
+                height: 100%;
+                padding: 35px;
+                }
                 p {
                     width: 100%;
                     font-size: $fuente-tablet-horizontal;
@@ -787,6 +816,7 @@ h2{
             img {
                 width: 100%;
                 height: 100%;
+                padding: 10px;
             }
     }
 //      * Renacimiento *
@@ -805,14 +835,13 @@ h2{
                 grid-area: texto;
                 align-self: center;
                 display: inline-block;
-                margin: 5px;
+                padding: 10px;
                 font-size: $fuente-tablet-horizontal;
-
             }
             img {
                 width: 100%;
                 height: 100%;
-                margin: 5px;
+                padding: 10px;
             }
     }
 //      * Fin del Camino *
@@ -829,13 +858,14 @@ h2{
             p {
                 grid-area: texto;
                 display: inline-block;
-                margin: 5px;
+                padding: 10px;
                 margin-bottom: 30px;
                 font-size: $fuente-tablet-horizontal;
             }
             img {
                 width: 100%;
                 height: 100%;
+                padding: 10px;
             }
     }
 }
@@ -853,28 +883,33 @@ h2{
         grid-template-areas:
         "imagen aside"
         "texto aside";
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 1fr;
             a {
                 grid-area: imagen;
                 align-self: center;
+                padding-left:0;
+                img {
+                width: 100%;
+                height: 100%;
+                padding:35px;
+                }
             }
             p {
                 grid-area: texto;
+                width: 90%;
             }
             .historiaBowieTexto {
-                padding-bottom: 0;
-            }
-            img {
-                width: 100%;
-                height: 100%;
-                margin: 5px;
-                padding-left: 80px;
-                padding-right: 80px;
-            }
+                padding-bottom: 85px;
+            }          
             aside {
                 grid-area: aside;
                 align-self: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    padding:35px;
+                }
                 p {
                     width: 100%;
                 }
@@ -904,6 +939,43 @@ h2{
     }
 }
 @media only screen and (min-width:1300px) and (max-width:1400px){
+    .comienzoHistoria {
+        display: grid;
+        grid-template-areas:
+        "imagen aside"
+        "texto aside";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr;
+            a {
+                grid-area: imagen;
+                align-self: center;
+                padding-left:0;
+                img {
+                width: 100%;
+                height: 100%;
+                padding:35px;
+                }
+            }
+            p {
+                grid-area: texto;
+                width: 90%;
+            }
+            .historiaBowieTexto {
+                padding-bottom: 0;
+            }          
+            aside {
+                grid-area: aside;
+                align-self: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    padding:35px;
+                }
+                p {
+                    width: 100%;
+                }
+            }
+    }
     .finDelCamino {
         display: grid;
         grid-template-areas:
@@ -925,5 +997,55 @@ h2{
                 width: 100%;
                 height: 100%;
             }
+    }
+}
+@media only screen and (min-width:1401px) and (max-width:1600px){
+    .comienzoHistoria {
+    display: grid;
+    grid-template-areas: 
+    "img aside"
+    "p aside";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr auto;
+        a {
+            @include animacionIzquierda
+            grid-area: img;
+            align-self: center;
+            padding-left:40px;
+            img{
+                width: 650px;
+                height:650px;
+                padding-right:20px;              
+            }
+        }
+        p {
+            @include animacionIzquierda
+            grid-area: p;
+            align-self: center;
+            padding-left: 50px;
+            font-size: $fuente-computadora;   
+            width: 90%;
+            a{
+                padding-left: 0;
+                text-decoration: none;
+            }         
+        }
+        aside {
+            grid-area: aside;
+            align-self: center;
+            margin: 0;
+            p{
+                @include animacionDerecha
+                width: 620px;
+                padding:20px;
+            }
+            img {
+                @include animacionDerecha
+                width: 550px;
+                height: 750px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
 }

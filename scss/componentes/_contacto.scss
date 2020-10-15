@@ -19,6 +19,9 @@ body{
 .contacto{
     font-style: italic;
     text-align: center;
+    a{
+        text-decoration: none;
+    }
         h1{
         @include animacion;
         color: transparent;
@@ -27,9 +30,17 @@ body{
         padding-top: 30px;
         padding-bottom: 30px;
         font-size: $titulo-computadora;
+            &:hover {
+            text-decoration: none;
+            color: transparent;
+            background: rgb(60,58,180);
+            background: linear-gradient(90deg, rgba(60,58,180,1) 0%, rgba(252,69,69,1) 100%);;
+            -webkit-background-clip: text;
+            }  
         }
         .textoContacto{
             font-size: $fuente-computadora;
+            padding:25px;
         }
         img{
         @include animacion;
@@ -125,7 +136,7 @@ body{
 } 
 //      *** Mobile 600px A 768px Fin ***
 //      *** Mobile 769px A 1300px  ***
-@media only screen and (min-width:769px) and (max-width:1300px){
+@media only screen and (min-width:769px) and (max-width:1200px){
     .contacto{
         display: grid;
         grid-template-areas:

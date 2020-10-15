@@ -10,6 +10,8 @@ body {
 .contacto {
   font-style: italic;
   text-align: center; }
+  .contacto a {
+    text-decoration: none; }
   .contacto h1 {
     animation: fadeIn;
     animation-duration: 4.5s;
@@ -19,8 +21,15 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 45px; }
+    .contacto h1:hover {
+      text-decoration: none;
+      color: transparent;
+      background: #3c3ab4;
+      background: linear-gradient(90deg, #3c3ab4 0%, #fc4545 100%);
+      -webkit-background-clip: text; }
   .contacto .textoContacto {
-    font-size: 22px; }
+    font-size: 22px;
+    padding: 25px; }
   .contacto img {
     animation: fadeIn;
     animation-duration: 4.5s;
@@ -84,7 +93,7 @@ body {
       width: 100%;
       margin-bottom: 20px; } }
 
-@media only screen and (min-width: 769px) and (max-width: 1300px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
   .contacto {
     display: grid;
     grid-template-areas: "titulo" "video" "texto";
@@ -117,6 +126,8 @@ body {
 
 .tituloDiscos {
   text-align: center; }
+  .tituloDiscos a {
+    text-decoration: none; }
   .tituloDiscos h1 {
     font-size: 45px;
     text-decoration: none;
@@ -124,11 +135,18 @@ body {
     background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
     -webkit-background-clip: text;
     padding-top: 30px; }
+    .tituloDiscos h1:hover {
+      text-decoration: none;
+      color: transparent;
+      background: #3c3ab4;
+      background: linear-gradient(90deg, #3c3ab4 0%, #fc4545 100%);
+      -webkit-background-clip: text; }
   .tituloDiscos h2 {
     animation: fadeInDown;
     animation-duration: 1.5s;
     font-size: 24px;
-    padding: 30px; }
+    padding: 30px;
+    color: #000004; }
 
 .discos {
   text-align: center;
@@ -551,48 +569,40 @@ body {
     body.dark .nav.justify-content-center {
       background: #000004;
       transition: .5s ease all; }
-    body.dark .subTituloHistoria {
+    body.dark section p {
       color: #fcfcfc; }
-    body.dark .historiaBowieTexto {
-      color: #fcfcfc; }
-    body.dark .bonusHistoria p {
-      color: #fcfcfc; }
-    body.dark .subtituloZiggyHistoria {
-      color: #fcfcfc; }
-    body.dark .ziggyStardustHistoria p {
-      color: #fcfcfc; }
-    body.dark .subtituloEpocaOscuraHistoria {
-      color: #fcfcfc; }
-    body.dark .epocaOscuraHistoria p {
-      color: #fcfcfc; }
-    body.dark .subtituloRenacimientoHistoria {
-      color: #fcfcfc; }
-    body.dark .renacimientoHistoria p {
-      color: #fcfcfc; }
-    body.dark .subtituloFinCaminoHistoria {
-      color: #fcfcfc; }
-    body.dark .finDelCamino p {
-      color: #fcfcfc; }
+
+#tituloLink {
+  text-decoration: none; }
 
 .tituloHistoria {
   text-align: center;
   color: transparent;
-  background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
-  -webkit-background-clip: text;
   animation: fadeInDown;
   animation-duration: 2s;
-  font-size: 45px; }
+  font-size: 45px;
+  font-style: italic;
+  background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
+  -webkit-background-clip: text; }
+  .tituloHistoria:hover {
+    color: transparent;
+    background: #3c3ab4;
+    background: linear-gradient(90deg, #3c3ab4 0%, #fc4545 100%);
+    -webkit-background-clip: text; }
 
 h2 {
   animation: fadeInLeftBig;
   animation-duration: 2s;
+  color: transparent;
+  background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
+  -webkit-background-clip: text;
+  text-align: center;
   font-size: 30px;
   padding: 40px; }
 
 .barraHistoria {
   margin: 10px;
-  margin-top: 50px;
-  padding: 40px; }
+  padding: 30px; }
 
 .nav.justify-content-center {
   background-color: #fcfcfc;
@@ -609,45 +619,45 @@ h2 {
 .comienzoHistoria {
   display: grid;
   grid-template-areas: "img aside" "p aside";
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   grid-template-columns: 1fr auto; }
-  .comienzoHistoria p {
-    grid-area: p;
-    align-self: center;
-    padding: 20px;
-    font-size: 22px; }
   .comienzoHistoria a {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
     grid-area: img;
     align-self: center;
-    margin: 20px; }
+    padding-left: 80px; }
+    .comienzoHistoria a img {
+      width: 700px;
+      height: 700px; }
+  .comienzoHistoria p {
+    animation: fadeInLeftBig;
+    animation-duration: 2s;
+    grid-area: p;
+    align-self: center;
+    padding-left: 50px;
+    padding-bottom: 70px;
+    font-size: 22px;
+    width: 90%; }
+    .comienzoHistoria p a {
+      padding-left: 0;
+      text-decoration: none; }
   .comienzoHistoria aside {
     grid-area: aside;
     align-self: center;
-    margin: 50px; }
-  .comienzoHistoria img {
-    animation: fadeInLeftBig;
-    animation-duration: 2s;
-    height: 500px;
-    margin: 5px 20px;
-    padding-left: 80px;
-    padding-right: 80px; }
-  .comienzoHistoria .historiaBowieTexto {
-    animation: fadeInLeftBig;
-    animation-duration: 2s;
-    padding-bottom: 500px; }
-
-.bonusHistoria p {
-  animation: fadeInRightBig;
-  animation-duration: 2s;
-  width: 620px; }
-
-.bonusHistoria img {
-  animation: fadeInRightBig;
-  animation-duration: 2s;
-  width: 600px;
-  height: 800px;
-  padding-left: 0;
-  padding-right: 0; }
+    padding: 20px; }
+    .comienzoHistoria aside p {
+      animation: fadeInRightBig;
+      animation-duration: 2s;
+      width: 620px;
+      padding: 50px; }
+    .comienzoHistoria aside img {
+      animation: fadeInRightBig;
+      animation-duration: 2s;
+      width: 600px;
+      height: 800px;
+      padding-left: 0;
+      padding-right: 0; }
 
 .ziggyStardustHistoria {
   display: grid;
@@ -668,6 +678,9 @@ h2 {
     animation-duration: 2s;
     display: inline-block;
     overflow: hidden; }
+    .ziggyStardustHistoria p a {
+      margin: 0;
+      text-decoration: none; }
   .ziggyStardustHistoria img {
     animation: fadeInRightBig;
     animation-duration: 2s;
@@ -691,6 +704,9 @@ h2 {
     animation: fadeInRightBig;
     animation-duration: 2s;
     width: 75%; }
+    .epocaOscuraHistoria p a {
+      margin: 0;
+      text-decoration: none; }
   .epocaOscuraHistoria img {
     animation: fadeInLeftBig;
     animation-duration: 2s;
@@ -714,6 +730,9 @@ h2 {
     animation: fadeInLeftBig;
     animation-duration: 2s;
     display: inline-block; }
+    .renacimientoHistoria p a {
+      margin: 0;
+      text-decoration: none; }
   .renacimientoHistoria img {
     animation: fadeInRightBig;
     animation-duration: 2s;
@@ -737,6 +756,9 @@ h2 {
     animation: fadeInRightBig;
     animation-duration: 2s;
     display: inline-block; }
+    .finDelCamino p a {
+      margin: 0;
+      text-decoration: none; }
   .finDelCamino img {
     animation: fadeInLeftBig;
     animation-duration: 2s;
@@ -759,21 +781,30 @@ h2 {
     grid-template-columns: 100%; }
     .comienzoHistoria a {
       grid-area: imagen;
-      align-self: center; }
+      align-self: center;
+      padding-left: 0; }
+      .comienzoHistoria a img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
     .comienzoHistoria p {
       grid-area: texto;
-      font-size: 14px; }
+      font-size: 14px;
+      width: 100%;
+      padding: 25px; }
     .comienzoHistoria .historiaBowieTexto {
       padding-bottom: 0; }
     .comienzoHistoria aside {
       grid-area: aside;
       align-self: center; }
-    .comienzoHistoria img {
-      width: 100%;
-      height: 100%;
-      margin: 5px; }
-  .bonusHistoria p {
-    width: 100%; }
+      .comienzoHistoria aside img {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        padding-bottom: 10px; }
+      .comienzoHistoria aside p {
+        width: 100%;
+        padding: 0px; }
   .ziggyStardustHistoria {
     display: grid;
     grid-template-areas: "imagen" "texto";
@@ -801,10 +832,12 @@ h2 {
     .epocaOscuraHistoria p {
       grid-area: texto;
       align-self: center;
-      font-size: 14px; }
+      font-size: 14px;
+      width: 70%; }
     .epocaOscuraHistoria img {
-      width: 250px;
-      height: 100%; }
+      width: 100%;
+      height: 100%;
+      padding: 10px; }
   .renacimientoHistoria {
     display: grid;
     grid-template-areas: "foto" "texto";
@@ -820,7 +853,7 @@ h2 {
     .renacimientoHistoria img {
       width: 100%;
       height: 100%;
-      margin: 5px; }
+      padding: 10px; }
   .finDelCamino {
     display: grid;
     grid-template-areas: "imagen" "texto";
@@ -831,11 +864,13 @@ h2 {
     .finDelCamino p {
       grid-area: texto;
       display: inline-block;
-      margin: 5px;
-      font-size: 14px; }
+      margin: 0px;
+      font-size: 14px;
+      padding: 25px; }
     .finDelCamino img {
       width: 100%;
-      height: 100%; } }
+      height: 100%;
+      padding: 10px; } }
 
 @media only screen and (min-width: 321px) and (max-width: 599px) {
   .tituloHistoria {
@@ -853,21 +888,30 @@ h2 {
     grid-template-columns: 1fr; }
     .comienzoHistoria a {
       grid-area: imagen;
-      align-self: center; }
+      align-self: center;
+      padding-left: 0; }
+      .comienzoHistoria a img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
     .comienzoHistoria p {
       grid-area: texto;
-      font-size: 18px; }
+      font-size: 18px;
+      width: 100%;
+      padding: 25px; }
     .comienzoHistoria .historiaBowieTexto {
       padding-bottom: 0; }
-    .comienzoHistoria img {
-      width: 90%;
-      height: 90%; }
     .comienzoHistoria aside {
       grid-area: aside;
       align-self: center; }
-    .comienzoHistoria .bonusHistoria p {
-      width: 100%;
-      font-size: 18px; }
+      .comienzoHistoria aside img {
+        width: 100%;
+        height: 100%;
+        padding: 10px; }
+      .comienzoHistoria aside p {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px; }
   .ziggyStardustHistoria {
     display: grid;
     grid-template-areas: "imagen" "texto";
@@ -914,7 +958,8 @@ h2 {
       font-size: 18px; }
     .renacimientoHistoria img {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      padding: 10px; }
   .finDelCamino {
     display: grid;
     grid-template-areas: "imagen" "texto";
@@ -929,7 +974,8 @@ h2 {
       font-size: 18px; }
     .finDelCamino img {
       width: 100%;
-      height: 100%; } }
+      height: 100%;
+      padding: 10px; } }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .tituloHistoria {
@@ -948,18 +994,24 @@ h2 {
     grid-template-columns: 1fr; }
     .comienzoHistoria a {
       grid-area: imagen;
-      align-self: center; }
+      align-self: center;
+      padding-left: 0; }
+      .comienzoHistoria a img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
     .comienzoHistoria p {
-      grid-area: texto; }
+      grid-area: texto;
+      width: 90%; }
     .comienzoHistoria .historiaBowieTexto {
       padding-bottom: 0; }
-    .comienzoHistoria img {
-      width: 100%;
-      height: 100%;
-      margin: 5px; }
     .comienzoHistoria aside {
       grid-area: aside;
       align-self: center; }
+      .comienzoHistoria aside img {
+        width: 100%;
+        height: 100%;
+        padding: 5px; }
       .comienzoHistoria aside p {
         width: 100%; }
   .ziggyStardustHistoria {
@@ -987,11 +1039,12 @@ h2 {
       align-self: center; }
     .epocaOscuraHistoria p {
       grid-area: texto;
-      align-self: center; }
+      align-self: center;
+      width: 85%; }
     .epocaOscuraHistoria img {
       width: 100%;
       height: 100%;
-      margin: 5px; }
+      padding: 10px; }
   .renacimientoHistoria {
     display: grid;
     grid-template-areas: "foto" "texto";
@@ -1004,11 +1057,11 @@ h2 {
       grid-area: texto;
       align-self: center;
       display: inline-block;
-      margin: 5px; }
+      padding: 10px; }
     .renacimientoHistoria img {
       width: 100%;
       height: 100%;
-      margin: 5px; }
+      padding: 10px; }
   .finDelCamino {
     display: grid;
     grid-template-areas: "imagen" "texto";
@@ -1019,11 +1072,12 @@ h2 {
     .finDelCamino p {
       grid-area: texto;
       display: inline-block;
-      margin: 5px;
+      padding: 10px;
       margin-bottom: 30px; }
     .finDelCamino img {
       width: 100%;
-      height: 100%; } }
+      height: 100%;
+      padding: 10px; } }
 
 @media only screen and (min-width: 769px) and (max-width: 1199px) {
   .tituloHistoria {
@@ -1041,21 +1095,25 @@ h2 {
     grid-template-columns: 1fr; }
     .comienzoHistoria a {
       grid-area: imagen;
-      align-self: center; }
+      align-self: center;
+      padding-left: 0; }
+      .comienzoHistoria a img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
     .comienzoHistoria p {
       grid-area: texto;
-      font-size: 22px; }
-    .comienzoHistoria img {
-      width: 100%;
-      height: 100%;
-      margin: 5px;
-      padding-left: 80px;
-      padding-right: 80px; }
+      font-size: 22px;
+      width: 92%; }
     .comienzoHistoria .historiaBowieTexto {
       padding-bottom: 0; }
     .comienzoHistoria aside {
       grid-area: aside;
       align-self: center; }
+      .comienzoHistoria aside img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
       .comienzoHistoria aside p {
         width: 100%;
         font-size: 22px; }
@@ -1090,7 +1148,8 @@ h2 {
       width: 90%; }
     .epocaOscuraHistoria img {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      padding: 10px; }
   .renacimientoHistoria {
     display: grid;
     grid-template-areas: "foto" "texto";
@@ -1103,12 +1162,12 @@ h2 {
       grid-area: texto;
       align-self: center;
       display: inline-block;
-      margin: 5px;
+      padding: 10px;
       font-size: 22px; }
     .renacimientoHistoria img {
       width: 100%;
       height: 100%;
-      margin: 5px; }
+      padding: 10px; }
   .finDelCamino {
     display: grid;
     grid-template-areas: "imagen" "texto";
@@ -1119,12 +1178,13 @@ h2 {
     .finDelCamino p {
       grid-area: texto;
       display: inline-block;
-      margin: 5px;
+      padding: 10px;
       margin-bottom: 30px;
       font-size: 22px; }
     .finDelCamino img {
       width: 100%;
-      height: 100%; } }
+      height: 100%;
+      padding: 10px; } }
 
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
   .tituloHistoria {
@@ -1135,24 +1195,28 @@ h2 {
   .comienzoHistoria {
     display: grid;
     grid-template-areas: "imagen aside" "texto aside";
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 1fr; }
     .comienzoHistoria a {
       grid-area: imagen;
-      align-self: center; }
+      align-self: center;
+      padding-left: 0; }
+      .comienzoHistoria a img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
     .comienzoHistoria p {
-      grid-area: texto; }
+      grid-area: texto;
+      width: 90%; }
     .comienzoHistoria .historiaBowieTexto {
-      padding-bottom: 0; }
-    .comienzoHistoria img {
-      width: 100%;
-      height: 100%;
-      margin: 5px;
-      padding-left: 80px;
-      padding-right: 80px; }
+      padding-bottom: 85px; }
     .comienzoHistoria aside {
       grid-area: aside;
       align-self: center; }
+      .comienzoHistoria aside img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
       .comienzoHistoria aside p {
         width: 100%; }
   .finDelCamino {
@@ -1173,6 +1237,33 @@ h2 {
       height: 100%; } }
 
 @media only screen and (min-width: 1300px) and (max-width: 1400px) {
+  .comienzoHistoria {
+    display: grid;
+    grid-template-areas: "imagen aside" "texto aside";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr; }
+    .comienzoHistoria a {
+      grid-area: imagen;
+      align-self: center;
+      padding-left: 0; }
+      .comienzoHistoria a img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
+    .comienzoHistoria p {
+      grid-area: texto;
+      width: 90%; }
+    .comienzoHistoria .historiaBowieTexto {
+      padding-bottom: 0; }
+    .comienzoHistoria aside {
+      grid-area: aside;
+      align-self: center; }
+      .comienzoHistoria aside img {
+        width: 100%;
+        height: 100%;
+        padding: 35px; }
+      .comienzoHistoria aside p {
+        width: 100%; }
   .finDelCamino {
     display: grid;
     grid-template-areas: "imagen" "texto";
@@ -1189,6 +1280,50 @@ h2 {
     .finDelCamino img {
       width: 100%;
       height: 100%; } }
+
+@media only screen and (min-width: 1401px) and (max-width: 1600px) {
+  .comienzoHistoria {
+    display: grid;
+    grid-template-areas: "img aside" "p aside";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr auto; }
+    .comienzoHistoria a {
+      animation: fadeInLeftBig;
+      animation-duration: 2s;
+      grid-area: img;
+      align-self: center;
+      padding-left: 40px; }
+      .comienzoHistoria a img {
+        width: 650px;
+        height: 650px;
+        padding-right: 20px; }
+    .comienzoHistoria p {
+      animation: fadeInLeftBig;
+      animation-duration: 2s;
+      grid-area: p;
+      align-self: center;
+      padding-left: 50px;
+      font-size: 22px;
+      width: 90%; }
+      .comienzoHistoria p a {
+        padding-left: 0;
+        text-decoration: none; }
+    .comienzoHistoria aside {
+      grid-area: aside;
+      align-self: center;
+      margin: 0; }
+      .comienzoHistoria aside p {
+        animation: fadeInRightBig;
+        animation-duration: 2s;
+        width: 620px;
+        padding: 20px; }
+      .comienzoHistoria aside img {
+        animation: fadeInRightBig;
+        animation-duration: 2s;
+        width: 550px;
+        height: 750px;
+        padding-left: 0;
+        padding-right: 0; } }
 
 /*** Variables Colores ***/
 body {
@@ -1290,17 +1425,23 @@ body {
   animation: fadeInUp;
   animation-duration: 1.5s; }
 
-.makeup__titulo {
-  text-align: center;
-  color: transparent;
-  background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
-  -webkit-background-clip: text; }
-
 .makeups {
   text-align: center; }
+  .makeups a {
+    text-decoration: none; }
   .makeups .makeup__titulo {
     padding-top: 30px;
-    font-size: 45px; }
+    font-size: 45px;
+    font-style: italic;
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
+    -webkit-background-clip: text; }
+    .makeups .makeup__titulo:hover {
+      color: transparent;
+      background: #3c3ab4;
+      background: linear-gradient(90deg, #3c3ab4 0%, #fc4545 100%);
+      -webkit-background-clip: text; }
   .makeups h2 {
     padding: 40px;
     padding-top: 100px;
@@ -1308,7 +1449,7 @@ body {
     animation: fadeInUp;
     animation-duration: 1.5s; }
   .makeups .container img {
-    height: 800px;
+    height: 850px;
     padding-left: 75px;
     padding-right: 75px; }
 
@@ -1337,6 +1478,7 @@ body {
     font-size: 22px;
     padding-top: 25px; }
   .makeups .container img {
+    width: 100%;
     height: 100%;
     padding-left: 15px;
     padding-right: 15px; } }
@@ -1351,6 +1493,7 @@ body {
     font-size: 24px;
     padding-top: 50px; }
   .makeups .container img {
+    width: 100%;
     height: 100%;
     padding-left: 20px;
     padding-right: 20px; } }
@@ -1367,7 +1510,7 @@ body {
     padding-left: 25px;
     padding-right: 25px; } }
 
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+@media only screen and (min-width: 769px) and (max-width: 991px) {
   .nav.flex-column {
     font-size: 22px; }
   .makeups .makeup__titulo {
@@ -1375,8 +1518,19 @@ body {
   .makeups h2 {
     font-size: 30px; }
   .makeups .container img {
-    width: 100%;
-    height: 700px;
+    height: 600px;
+    padding-left: 30px;
+    padding-right: 30px; } }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .nav.flex-column {
+    font-size: 22px; }
+  .makeups .makeup__titulo {
+    font-size: 40px; }
+  .makeups h2 {
+    font-size: 30px; }
+  .makeups .container img {
+    height: 750px;
     padding-left: 30px;
     padding-right: 30px; } }
 
@@ -1395,10 +1549,6 @@ body {
   animation: fadeInUp;
   animation-duration: 1.5s; }
 
-.vestimenta__titulo {
-  font-style: italic;
-  text-align: center; }
-
 .nav.flex-column {
   animation: fadeInDown;
   animation-duration: 1.5s;
@@ -1408,48 +1558,53 @@ body {
 
 .vestimentas {
   text-align: center; }
+  .vestimentas a {
+    text-decoration: none; }
   .vestimentas .vestimenta__titulo {
+    font-style: italic;
+    text-align: center;
     font-size: 45px;
     color: transparent;
     background: linear-gradient(to left, #1216ff, #ff1919, #1216ff, #ff4b4b);
     -webkit-background-clip: text;
     padding-top: 30px; }
+    .vestimentas .vestimenta__titulo:hover {
+      color: transparent;
+      background: #3c3ab4;
+      background: linear-gradient(90deg, #3c3ab4 0%, #fc4545 100%);
+      -webkit-background-clip: text; }
   .vestimentas h2 {
     animation: fadeInUp;
     animation-duration: 1.5s;
-    padding: 40px;
-    padding-top: 100px;
     font-size: 35px; }
   .vestimentas .container img {
-    height: 800px;
+    height: 850px;
     padding-left: 75px;
     padding-right: 75px; }
 
 .vestimenta__subTitulo1 {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  color: #bad4e5;
-  padding-top: 20px;
-  padding-bottom: 10px; }
+  padding: 40px;
+  padding-top: 100px;
+  color: #bad4e5; }
 
 .vestimenta__subTitulo2 {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 40px;
+  padding-top: 100px;
   color: #df2d62; }
 
 .vestimenta__subTitulo3 {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 40px;
+  padding-top: 100px;
   color: #3264bb; }
 
 .vestimenta__subTitulo4 {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 40px;
+  padding-top: 100px;
   color: #878787; }
 
 .vestimenta__subTitulo5 {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 40px;
+  padding-top: 100px;
   color: #b40114; }
 
 @media only screen and (max-width: 320px) {
@@ -1463,9 +1618,10 @@ body {
     padding: 20px;
     padding-top: 25px; }
   .vestimentas .container img {
+    width: 100%;
     height: 100%;
-    padding-left: 10px;
-    padding-right: 10px; } }
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media only screen and (min-width: 321px) and (max-width: 599px) {
   .nav.flex-column {
@@ -1478,6 +1634,7 @@ body {
     padding: 30px;
     padding-top: 50px; }
   .vestimentas .container img {
+    width: 100%;
     height: 100%;
     padding-left: 20px;
     padding-right: 20px; } }
@@ -1490,11 +1647,12 @@ body {
   .vestimentas h2 {
     font-size: 25px; }
   .vestimentas .container img {
+    width: 100%;
     height: 100%;
     padding-left: 15px;
     padding-right: 15px; } }
 
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+@media only screen and (min-width: 769px) and (max-width: 991px) {
   .nav.flex-column {
     font-size: 22px; }
   .vestimentas .vestimenta__titulo {
@@ -1502,7 +1660,19 @@ body {
   .vestimentas h2 {
     font-size: 30px; }
   .vestimentas .container img {
-    height: 700px;
+    height: 600px;
+    padding-left: 30px;
+    padding-right: 30px; } }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .nav.flex-column {
+    font-size: 22px; }
+  .vestimentas .vestimenta__titulo {
+    font-size: 40px; }
+  .vestimentas h2 {
+    font-size: 30px; }
+  .vestimentas .container img {
+    height: 750px;
     padding-left: 30px;
     padding-right: 30px; } }
 
