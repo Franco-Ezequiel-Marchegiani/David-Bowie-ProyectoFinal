@@ -19,7 +19,18 @@ body{
         background: $colorNegro;
             .subTituloDisco{
             color: $colorBlanco;
-            }   
+            }
+            .discos{
+                .card{
+                    .card-title{
+                    color: $colorBlanco;    
+                    }   
+                    .card-text{
+                    color: $colorBlanco;    
+                    }
+                }
+            }
+            
     }
 }
 //      *** Discografía ***
@@ -67,10 +78,10 @@ body{
             box-shadow: $sombraLight;
         }
         .card-title{
-            color: $colorBlanco;
+            color: $colorNegro;
         }
         .card-text{
-             color: $colorBlanco;
+             color: $colorNegro;
         }
     }
 }

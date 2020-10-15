@@ -19,6 +19,9 @@
     background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(255, 55, 96, 1) 100%);
 }
 //      *** DarkMode ***
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: $colorBlanco;
     transition: .5s ease all;

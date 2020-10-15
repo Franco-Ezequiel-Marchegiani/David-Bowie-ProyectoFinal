@@ -4,6 +4,9 @@
     animation-duration: 1.5s;
 }
 //      *** DarkMode ***
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: $colorBlanco;
     transition: .5s ease all;
@@ -36,7 +39,8 @@ body{
     font-size:$titulo-computadora;
     }
     h2 {
-    padding: 20px;
+    padding: 40px;
+    padding-top:100px;
     font-size: $titulo-tablet-chica;
     animation: fadeInUp;
     animation-duration: 1.5s;
@@ -66,6 +70,7 @@ body{
             }            
             h2 {
             font-size: $subTitulo-tablet-horizontal;
+            padding-top:25px;
             }
             .container{
                 img{
@@ -89,6 +94,7 @@ body{
         .makeups{
             h2{
                 font-size: $subTitulo-computadora;
+                padding-top:50px;
             }   
             .container{
                 img{

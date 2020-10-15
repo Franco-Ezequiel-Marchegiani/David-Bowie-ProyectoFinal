@@ -110,6 +110,10 @@ body {
     background: #000004; }
     body.dark .subTituloDisco {
       color: #fcfcfc; }
+    body.dark .discos .card .card-title {
+      color: #fcfcfc; }
+    body.dark .discos .card .card-text {
+      color: #fcfcfc; }
 
 .tituloDiscos {
   text-align: center; }
@@ -152,9 +156,9 @@ body {
       background: #222222;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16); }
     .discos .card .card-title {
-      color: #fcfcfc; }
+      color: #000004; }
     .discos .card .card-text {
-      color: #fcfcfc; }
+      color: #000004; }
 
 @media only screen and (max-width: 320px) {
   .tituloDiscos h1 {
@@ -536,6 +540,9 @@ footer {
   text-align: center; }
 
 /*** Variables Colores ***/
+html {
+  scroll-behavior: smooth; }
+
 body {
   background: #fcfcfc;
   transition: .5s ease all; }
@@ -1263,6 +1270,9 @@ body {
     font-size: 40px; } }
 
 /*** Variables Colores ***/
+html {
+  scroll-behavior: smooth; }
+
 body {
   background: #fcfcfc;
   transition: .5s ease all; }
@@ -1292,7 +1302,8 @@ body {
     padding-top: 30px;
     font-size: 45px; }
   .makeups h2 {
-    padding: 20px;
+    padding: 40px;
+    padding-top: 100px;
     font-size: 35px;
     animation: fadeInUp;
     animation-duration: 1.5s; }
@@ -1323,7 +1334,8 @@ body {
     font-size: 25px;
     padding-top: 20px; }
   .makeups h2 {
-    font-size: 22px; }
+    font-size: 22px;
+    padding-top: 25px; }
   .makeups .container img {
     height: 100%;
     padding-left: 15px;
@@ -1336,7 +1348,8 @@ body {
     font-size: 30px;
     padding-top: 20px; }
   .makeups h2 {
-    font-size: 24px; }
+    font-size: 24px;
+    padding-top: 50px; }
   .makeups .container img {
     height: 100%;
     padding-left: 20px;
@@ -1369,6 +1382,9 @@ body {
 
 /*** Variables Colores ***/
 /*** Variables Colores ***/
+html {
+  scroll-behavior: smooth; }
+
 body {
   background: #fcfcfc;
   transition: .5s ease all; }
@@ -1401,7 +1417,8 @@ body {
   .vestimentas h2 {
     animation: fadeInUp;
     animation-duration: 1.5s;
-    padding: 30px;
+    padding: 40px;
+    padding-top: 100px;
     font-size: 35px; }
   .vestimentas .container img {
     height: 800px;
@@ -1442,7 +1459,9 @@ body {
     font-size: 25px;
     padding-top: 20px; }
   .vestimentas h2 {
-    font-size: 22px; }
+    font-size: 22px;
+    padding: 20px;
+    padding-top: 25px; }
   .vestimentas .container img {
     height: 100%;
     padding-left: 10px;
@@ -1455,7 +1474,9 @@ body {
     font-size: 30px;
     padding-top: 20px; }
   .vestimentas h2 {
-    font-size: 24px; }
+    font-size: 24px;
+    padding: 30px;
+    padding-top: 50px; }
   .vestimentas .container img {
     height: 100%;
     padding-left: 20px;
