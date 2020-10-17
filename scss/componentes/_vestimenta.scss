@@ -37,6 +37,7 @@ body{
             text-decoration: none;
         }
         .vestimenta__titulo{      
+            @include animacionAbajo;
             font-style: italic;
             text-align: center; 
             font-size:$titulo-computadora;

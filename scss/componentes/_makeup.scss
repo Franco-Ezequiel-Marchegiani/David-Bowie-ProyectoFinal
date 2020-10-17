@@ -1,6 +1,10 @@
 @import "./componentes/variables";
-@mixin animacion {
+@mixin animacion{
     animation: fadeInUp;
+    animation-duration: 1.5s;
+}
+@mixin animacionAbajo{
+    animation: fadeInDown;
     animation-duration: 1.5s;
 }
 @mixin subTitulos{
@@ -51,6 +55,7 @@ body{
             text-decoration: none;
         }
         .makeup__titulo{
+            @include animacionAbajo;
         padding-top: 30px;
         font-size:$titulo-computadora;
         font-style: italic;
