@@ -33,19 +33,19 @@ body{
     }
 }
 //      *** Discografía ***
-.tituloDiscos {
+.tituloDiscos{
     text-align: center;
         a{
             text-decoration:none;
         }
-        h1 {
+        h1{
         font-size: $titulo-computadora;
         text-decoration: none;
         color: transparent;
         background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
         -webkit-background-clip: text;
         padding-top: 30px;
-            &:hover {
+            &:hover{
             text-decoration: none;
             color: transparent;
             background: rgb(60,58,180);
@@ -53,20 +53,20 @@ body{
             -webkit-background-clip: text;
             }           
         }
-        h2 {
+        h2{
         @include animacionAbajo;
         font-size: $subTitulo-computadora;       
         padding: 30px;
         color: $colorNegro;
         }
 }
-.discos {
+.discos{
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-around;
-    .card {
+    .card{
         @include animacionArriba;
         margin-bottom: 50px;
         background: $colorBlanco;
@@ -78,12 +78,12 @@ body{
         margin-bottom: 20px;
         border: 1px solid;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-            &:hover {
+            &:hover{
             transform: scale(1.01, 1.01);
             border: 1px solid rgb(0, 0, 0);
             }
         }
-        body.dark & {
+        body.dark &{
             background: $grisOscuro;
             box-shadow: $sombraLight;
         }
@@ -106,12 +106,12 @@ body{
                 font-size: $subTitulo-celular-pequeño; 
             }
     }
-    .discos {
+    .discos{
         display: grid;
         grid-template-areas:
-            "titulo"
-            "link"
-            "subtitulo";
+        "titulo"
+        "link"
+        "subtitulo";
         grid-template-rows: 1fr;
         grid-template-columns: 100%;
         padding: 30px;
@@ -120,12 +120,12 @@ body{
                 grid-area: link;
                 width: 100%;
             }
-            h2 {
+            h2{
                 grid-area: titulo;
                 font-size: 16px;
                 margin: 20px;
             }
-            h5 {
+            h5{
                 grid-area: subtitulo;
                 font-size: 16px;
                 margin: 5px;
@@ -133,10 +133,10 @@ body{
             p{
                 font-size: 12px;
             }
-            img {
+            img{
                 @include widthHeigth100;
                 align-self: center;
-                }
+            }
         }
     }
 }
@@ -151,26 +151,26 @@ body{
                 font-size: $subTitulo-celular-horizontal;
             }
     }
-    .discos {
+    .discos{
         display: grid;
         grid-template-areas:
-            "titulo"
-            "link"
-            "subtitulo";
+        "titulo"
+        "link"
+        "subtitulo";
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
         padding: 55px;
         .card{
-            a {
+            a{
                 grid-area: link;
                 width: 100%;
             }
-            h2 {
+            h2{
                 grid-area: titulo;
                 font-size: 18px;
                 margin: 20px;
             }
-            h5 {
+            h5{
                 grid-area: subtitulo;
                 font-size: 18px;
                 margin: 5px;
@@ -178,7 +178,7 @@ body{
             p{
                 font-size: 14px;
             }
-            img {
+            img{
                 @include widthHeigth100;
                 align-self: center;
             }
@@ -196,7 +196,7 @@ body{
                 font-size: $subTitulo-tablet-chica;
             }
     }
-    .discos {
+    .discos{
         display: grid;
         grid-template-areas:
         "titulo"
@@ -206,16 +206,16 @@ body{
         grid-template-columns: 1fr;
         padding: 85px;
         .card{            
-            a {
+            a{
                 grid-area: link;
                 width: 100%;
             }
-            h2 {
+            h2{
                 grid-area: titulo;
                 font-size: 20px;
                 margin: 20px;
             }
-            h5 {
+            h5{
                 grid-area: subtitulo;
                 font-size: 20px;
                 margin: 5px;
@@ -223,7 +223,7 @@ body{
             p{
                 font-size: 16px;
             }            
-            img {                
+            img{                
                 @include widthHeigth100;
                 align-self: center;
             }
@@ -249,7 +249,7 @@ body{
                 border: 1px solid;
                 box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
             }  
-            &:hover {
+            &:hover{
             transform: scale(1.03, 1.03);
             border: 1px solid rgb(0, 0, 0);
             }
@@ -279,4 +279,3 @@ body{
         }
     }
 }
-

@@ -8,7 +8,7 @@ body{
         }
     }
 }
-footer {
+footer{
     background: linear-gradient(0deg, rgb(105, 97, 255) 0%, rgb(202, 60, 60) 100%);
     display: grid;
     grid-template-areas: 
@@ -55,7 +55,7 @@ footer {
         }
     }
 }
-    .descripcion__footer {
+    .descripcion__footer{
         grid-area: descripcion;
         align-self: center;
         text-align: center;
@@ -67,7 +67,7 @@ footer {
                 padding-top: 20px;
             }      
     }
-    .redes__bowie {
+    .redes__bowie{
         text-align: center;
         grid-area: bowie;
             p{
@@ -80,7 +80,7 @@ footer {
                 font-size: $titulo-tablet-horizontal;
             }
     }
-    .mis__redes {
+    .mis__redes{
         text-align: center;
         grid-area: misRedes;
         p{
@@ -95,21 +95,21 @@ footer {
     }
 /*** Footer Mobile Home 320px ***/
 @media only screen and (max-width:320px){
-    footer {
+    footer{
         grid-template-areas:
         "descripcion"
         "bowie"
         "misRedes";
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
-            p {
+            p{
                 font-size: $fuente-celular-pequeño;
             }          
             .fab{              
                 font-size: 50px;
             }
     }
-    .descripcion__footer {
+    .descripcion__footer{
         grid-area: descripcion;
         align-self: center;
         text-align: center;
@@ -121,7 +121,7 @@ footer {
                 padding-top: 20px;
             }
     }
-    .redes__bowie {
+    .redes__bowie{
         text-align: center;
         grid-area: bowie;
         font-size: 40px;
@@ -130,7 +130,7 @@ footer {
                 font-size: $subTitulo-tablet-horizontal;
             }
     }
-    .mis__redes {
+    .mis__redes{
         text-align: center;
         grid-area: misRedes;
         font-size: 40px;
@@ -143,14 +143,14 @@ footer {
 //      *** Footer Mobile 320px Fin***
 //      *** Footer Mobile 321px A 599px ***
 @media only screen and (min-width:321px) and (max-width: 599px) {
-    footer {
+    footer{
         grid-template-areas: 
         "descripcion"
         "bowie"
         "misRedes";
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
-            p {
+            p{
                 font-size: 16px;
                 padding-top: 20px;
             }
@@ -158,7 +158,7 @@ footer {
                 font-size: 60px;
             }
     }
-    .descripcion__footer {
+    .descripcion__footer{
         grid-area: descripcion;
         align-self: center;
         text-align: center;
@@ -173,24 +173,24 @@ footer {
                 padding-top: 20px;
             }
     }
-    .redes__bowie {
+    .redes__bowie{
         text-align: center;
         grid-area: bowie;
         font-size: 60px;
         align-self: center;
-            p {
+            p{
                 font-size: $fuente-celular-horizontal;
             }
             .titulo__footer{
                 font-size: $titulo-celular-pequeño;
             }
     }
-    .mis__redes {
+    .mis__redes{
         text-align: center;
         grid-area: misRedes;
         font-size: 60px;
         align-self: center;
-            p {
+            p{
                 font-size: $fuente-celular-horizontal;
             }
             .titulo__footer{
@@ -201,19 +201,19 @@ footer {
 //      *** Footer Mobile 321px A 599px Fin***
 //      *** Footer Mobile 600px A 768px ***
 @media only screen and (min-width:600px) and (max-width: 768px){
-    footer {
+    footer{
     grid-template-areas: 
     "descripcion"
     "bowie"
     "misRedes";
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-        p {
+        p{
             font-size: 18px;
             padding-top: 20px;
         }
     }
-    .descripcion__footer {
+    .descripcion__footer{
         grid-area: descripcion;
         align-self: center;
         text-align: center;
@@ -222,29 +222,29 @@ footer {
             .texto__Footer{
                 font-size: $fuente-tablet-chica;
             }
-            img {
+            img{
                 align-self: center;
                 padding-top: 20px;
             }
     }
-    .redes__bowie {
+    .redes__bowie{
         text-align: center;
         grid-area: bowie;
         font-size: 60px;
         align-self: center;
-            p {
+            p{
                 font-size: $fuente-tablet-chica;
             }
             .titulo__footer{
                 font-size: $titulo-celular-horizontal;
             }
     }
-    .mis__redes {
+    .mis__redes{
         text-align: center;
         grid-area: misRedes;
         font-size: 60px;
         align-self: center;
-            p {
+            p{
                 font-size: $fuente-tablet-chica;
             }
             .titulo__footer{
@@ -255,12 +255,12 @@ footer {
 //      *** Footer Mobile 600px A px 768Fin***
 //      *** Footer Mobile 769px A 1300px ***
 @media only screen and (min-width:769px) and (max-width:1200px) {
-    footer {
+    footer{
         grid-template-areas: 
         "descripcion bowie misRedes";
         grid-template-rows: 1fr;
         grid-template-columns: 40% 30% 30%;
-            p {
+            p{
                 padding-top: 20px;
             }
             .fab{
@@ -270,13 +270,13 @@ footer {
                 font-size: 55px;
             }
     }
-    .descripcion__footer {
+    .descripcion__footer{
         grid-area: descripcion;
         align-self: center;
         text-align: center;
         padding-bottom: 10px;
         color: black;
-            img {
+            img{
                 align-self: center;
                 padding-top: 20px;
             }
@@ -284,10 +284,10 @@ footer {
             font-size: $fuente-tablet-horizontal;
             }
     }
-    .redes__bowie {
+    .redes__bowie{
         text-align: center;
         grid-area: bowie;
-            p {
+            p{
                 font-size: $fuente-tablet-horizontal;
                 color: black;
             }
@@ -297,10 +297,10 @@ footer {
                 font-size: $titulo-tablet-chica;
             }
     }
-    .mis__redes {
+    .mis__redes{
         text-align: center;
         grid-area: misRedes;
-            p {
+            p{
                 font-size: $fuente-tablet-horizontal;
             }
             .titulo__footer{

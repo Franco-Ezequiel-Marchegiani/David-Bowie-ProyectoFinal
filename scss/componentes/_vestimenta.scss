@@ -1,13 +1,15 @@
 @import "./componentes/variables";
-@mixin animacionArriba {
+@mixin animacionArriba{
     animation: fadeInUp;
     animation-duration: 1.5s;
 }
-@mixin animacionAbajo {
+@mixin animacionAbajo{
     animation: fadeInDown;
     animation-duration: 1.5s;
 }
 @mixin vestimentaSubtitulo{
+    @include animacionArriba;
+    font-size: $titulo-tablet-chica;
     padding: 40px;
     padding-top:100px;
 }
@@ -18,27 +20,23 @@ html{
 body{
     background: $colorBlanco;
     transition: .5s ease all;
-
-    &.dark {
+    &.dark{
         background: $colorNegro;
     }
 }
 //      *** Vestimenta ***
-.container {
-    @include animacionArriba;
-}
-.nav.flex-column { 
-    @include animacionAbajo
+.nav.flex-column{ 
     font-size: $subTitulo-computadora;
     padding: 50px;
-    font-weight: 700;
+    font-weight: 700; 
+    --animate-duration: 1.5s;         
 }
-.vestimentas {
+.vestimentas{
     text-align: center;
-    a{
-        text-decoration: none;
-    }
-        .vestimenta__titulo {      
+        a{
+            text-decoration: none;
+        }
+        .vestimenta__titulo{      
             font-style: italic;
             text-align: center; 
             font-size:$titulo-computadora;
@@ -46,16 +44,12 @@ body{
             background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
             -webkit-background-clip: text;
             padding-top: 30px;               
-                &:hover {
+                &:hover{
                 color: transparent;
                 background: rgb(60,58,180);
                 background: linear-gradient(90deg, rgba(60,58,180,1) 0%, rgba(252,69,69,1) 100%);;
                 -webkit-background-clip: text;
                 } 
-        }
-        h2 {
-            @include animacionArriba
-            font-size: $titulo-tablet-chica;
         }
         .container{
             img{
@@ -65,23 +59,23 @@ body{
             }
         }
 }
-.vestimenta__subTitulo1 {
+.vestimenta__subTitulo1{
     @include vestimentaSubtitulo;
     color: $colorHunkyDory;
 }
-.vestimenta__subTitulo2 {
+.vestimenta__subTitulo2{
     @include vestimentaSubtitulo;
     color: $colorZiggy;
 }
-.vestimenta__subTitulo3 {
+.vestimenta__subTitulo3{
     @include vestimentaSubtitulo;
     color: $colorDiamonDogs;
 }
-.vestimenta__subTitulo4 {
+.vestimenta__subTitulo4{
     @include vestimentaSubtitulo;
     color: $colorStationToStation;
 }
-.vestimenta__subTitulo5 {
+.vestimenta__subTitulo5{
     @include vestimentaSubtitulo;    
     color: $colorUnionJacket;
 }
@@ -95,7 +89,7 @@ body{
             font-size: $titulo-celular-pequeño;
             padding-top: 20px;
             }
-            h2 {
+            h2{
                 font-size: $subTitulo-tablet-horizontal;
                 padding: 20px;
                 padding-top:25px;
@@ -109,7 +103,7 @@ body{
                 }
             }
         }        
-    } 
+} 
 //    ***Mobile 320px A px Fin ***
 //    ***Mobile 321px A 599px  ***
 @media only screen and (min-width:321px) and (max-width:599px){
@@ -117,15 +111,15 @@ body{
             font-size: $subTitulo-celular-horizontal;
         }
         .vestimentas{
-        .vestimenta__titulo{
-            font-size: $titulo-celular-horizontal;
-            padding-top: 20px;
-            } 
-                h2 {
+            .vestimenta__titulo{
+                font-size: $titulo-celular-horizontal;
+                padding-top: 20px;
+                } 
+                h2{
                 font-size: $subTitulo-computadora;
                 padding: 30px;
                 padding-top:50px;
-            }
+                }
             .container{
                 img{
                     width:100%;
@@ -135,7 +129,7 @@ body{
                 }
             }
         }
-    } 
+} 
 //    ***Mobile 321px A 599px Fin ***
 //    ***Mobile 600px A 768px  ***
 @media only screen and (min-width:600px) and (max-width:768px){
@@ -203,5 +197,4 @@ body{
             }        
         }
 }
-
 //      ***Mobile 769px A 1200px Fin ***

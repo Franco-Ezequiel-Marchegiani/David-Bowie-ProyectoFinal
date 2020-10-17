@@ -3,6 +3,13 @@
     animation: fadeInUp;
     animation-duration: 1.5s;
 }
+@mixin subTitulos{
+    padding: 40px;
+    padding-top:100px;
+    font-size: $titulo-tablet-chica;
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+}
 //      *** DarkMode ***
 html{
     scroll-behavior: smooth;
@@ -10,61 +17,82 @@ html{
 body{
     background: $colorBlanco;
     transition: .5s ease all;
-
-    &.dark {
+    &.dark{
         background: $colorNegro;
     }
 }
 //      *** MakeUp ***
 .nav.flex-column{
-    @include animacion;
     font-weight: 700;
     padding: 50px;
     font-size: $subTitulo-computadora;
+        #nav-link1{
+            animation-duration: 1.15s;
+        }                
+        #nav-link2{
+            animation-duration: 1.3s;
+        }                
+        #nav-link3{
+            animation-duration: 1.5s;
+        }                
+        #nav-link4{
+            animation-duration: 1.75s;
+        }                
+        #nav-link5{
+            animation-duration: 1.95s;
+        }
 }
-.container {
+.container{
     @include animacion;
 }
-.makeups {
-    a{
-        text-decoration: none;
-    }
+.makeups{
     text-align: center;
-    .makeup__titulo {
-    padding-top: 30px;
-    font-size:$titulo-computadora;
-    font-style: italic;
-    text-align: center;
-    color: transparent;
-    background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
-    -webkit-background-clip: text;
-        &:hover {
-            color: transparent;
-            background: rgb(60,58,180);
-            background: linear-gradient(90deg, rgba(60,58,180,1) 0%, rgba(252,69,69,1) 100%);;
-            -webkit-background-clip: text;
-        } 
-    }
-    h2 {
-    padding: 40px;
-    padding-top:100px;
-    font-size: $titulo-tablet-chica;
-    animation: fadeInUp;
-    animation-duration: 1.5s;
-    }
-    .container{
-        img{
-            height:850px;
-            padding-left:75px;
-            padding-right:75px;
+        a{
+            text-decoration: none;
         }
-    }    
+        .makeup__titulo{
+        padding-top: 30px;
+        font-size:$titulo-computadora;
+        font-style: italic;
+        text-align: center;
+        color: transparent;
+        background: linear-gradient(to left, rgb(18, 22, 255), rgb(255, 25, 25), rgb(18, 22, 255), rgb(255, 75, 75));
+        -webkit-background-clip: text;
+            &:hover{
+                color: transparent;
+                background: rgb(60,58,180);
+                background: linear-gradient(90deg, rgba(60,58,180,1) 0%, rgba(252,69,69,1) 100%);;
+                -webkit-background-clip: text;
+            } 
+        }
+        .container{
+            img{
+                height:850px;
+                padding-left:75px;
+                padding-right:75px;
+            }
+        }    
 }
-.makeup__subTitulo1 {color: $colorZiggy;}
-.makeup__subTitulo2 {color: $colorAladdin;}
-.makeup__subTitulo3 {color: $colorScaryMonsters;}
-.makeup__subTitulo4 {color: $colorLabyrinth;}
-.makeup__subTitulo5 {color: $colorHunkyDory;}
+.makeup__subTitulo1{
+    color: $colorZiggy;
+    @include subTitulos; 
+}
+.makeup__subTitulo2{
+    color: $colorAladdin;
+    @include subTitulos;
+}
+.makeup__subTitulo3{
+    color: $colorScaryMonsters;
+    @include subTitulos;
+}
+.makeup__subTitulo4{
+    color: $colorLabyrinth;
+    @include subTitulos;
+}
+.makeup__subTitulo5{
+    color: $colorHunkyDory;
+    @include subTitulos;
+}
 //    ***Mobile 320px A px  ***
 @media only screen and (max-width:320px){
         .nav.flex-column{
@@ -75,7 +103,7 @@ body{
                 font-size: $titulo-celular-pequeño;
                 padding-top: 20px;
             }            
-            h2 {
+            h2{
             font-size: $subTitulo-tablet-horizontal;
             padding-top:25px;
             }
@@ -134,14 +162,14 @@ body{
                     padding-right:25px;
                 }
             }       
-    }
+        }
 }
 //        ***Mobile 600px A 768px Fin ***
 //      *** Mobile 769px A 1200px  ***
 @media only screen and (min-width:769px) and (max-width:991px){
-    .nav.flex-column{
-        font-size: $subTitulo-tablet-horizontal;
-    }
+        .nav.flex-column{
+            font-size: $subTitulo-tablet-horizontal;
+        }
         .makeups{
             .makeup__titulo{
                 font-size: $titulo-tablet-horizontal;
@@ -160,9 +188,9 @@ body{
 }
 //      *** Mobile 769px A 1200px Fin ***
 @media only screen and (min-width:992px) and (max-width:1200px){
-    .nav.flex-column{
-        font-size: $subTitulo-tablet-horizontal;
-    }
+        .nav.flex-column{
+            font-size: $subTitulo-tablet-horizontal;
+        }
         .makeups{
             .makeup__titulo{
                 font-size: $titulo-tablet-horizontal;

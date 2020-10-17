@@ -30,7 +30,7 @@ body{
         padding-top: 30px;
         padding-bottom: 30px;
         font-size: $titulo-computadora;
-            &:hover {
+            &:hover{
             text-decoration: none;
             color: transparent;
             background: rgb(60,58,180);
@@ -48,7 +48,7 @@ body{
         margin-bottom: 20px;     
             &:hover{
                 transform: scale(1.01, 1.01);
-                    }                
+            }                
         }
 }
 //      *** Mobile 320px  ***
@@ -56,9 +56,9 @@ body{
     .contacto{
         display: grid;
         grid-template-areas:
-            "titulo"
-            "video"
-            "texto";
+        "titulo"
+        "video"
+        "texto";
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
             a{
@@ -85,9 +85,9 @@ body{
     .contacto{
         display: grid;
         grid-template-areas:
-            "titulo"
-            "video"
-            "texto";
+        "titulo"
+        "video"
+        "texto";
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
             a{
@@ -112,9 +112,9 @@ body{
     .contacto{
         display: grid;
         grid-template-areas:
-            "titulo"
-            "video"
-            "texto";
+        "titulo"
+        "video"
+        "texto";
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
             a{
@@ -140,9 +140,9 @@ body{
     .contacto{
         display: grid;
         grid-template-areas:
-            "titulo"
-            "video"
-            "texto";
+        "titulo"
+        "video"
+        "texto";
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
             a{

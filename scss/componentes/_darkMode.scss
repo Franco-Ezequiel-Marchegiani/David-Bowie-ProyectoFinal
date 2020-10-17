@@ -8,7 +8,7 @@
     cursor: pointer;
     display: flex;
     outline: none;
-        &::after {
+        &::after{
             content: ""; //Importante para el funcionamiento del resto de las funciones
             display: block;
             width: 30px;
@@ -30,7 +30,7 @@
                     left: unset;
                 }
         }
-        span {
+        span{
             width: 30px;
             height: 30px;
             line-height: 30px;
