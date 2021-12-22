@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Si eres aficionado al maquillaje y amas a David Bowie esta es tu página. Contamos con todos los make ups del artista británico a lo largo de su historia musical, desde Ziggy Stardust, Scary Monsters y el makeup icónico del album 'Aladdín Sane'!">
-  <meta name="keywords" content="Bowie, David Bowie, Musica, Cantante, Artista, David Jones,Ziggy Stardust,Aladdín Sane,Scary Monsters (& Super Creeps),Labyrinth,Hunky Dory, Rebel Rebel, Starman, Life On Mars?, Changes, Moonage Daydream, David Bowie Legacy">
+  <meta name="description"
+    content="Si eres aficionado al maquillaje y amas a David Bowie esta es tu página. Contamos con todos los make ups del artista británico a lo largo de su historia musical, desde Ziggy Stardust, Scary Monsters y el makeup icónico del album 'Aladdín Sane'!">
+  <meta name="keywords"
+    content="Bowie, David Bowie, Musica, Cantante, Artista, David Jones,Ziggy Stardust,Aladdín Sane,Scary Monsters (& Super Creeps),Labyrinth,Hunky Dory, Rebel Rebel, Starman, Life On Mars?, Changes, Moonage Daydream, David Bowie Legacy">
   <link rel="icon" href="../imagenes/iconos/iconHead.png">
   <script src="https://kit.fontawesome.com/f70e873a73.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -14,237 +16,251 @@
   <link rel="stylesheet" href="../css/estilo.css">
   <title>Make Ups Bowie</title>
 </head>
+
 <body>
   <header>
-          <nav class="navbar navbar-expand-lg ">
-            <a class="navbar-brand" href="../index.html">
-              <img src="../imagenes/logo/logo.png" width="70" height="70" alt="LogoHeader" loading="lazy" class="header__logo">
-            </a>           
-            <form class="form-inline"> <!--La etiqueta Muestra el navBar a la derecha -->
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">                
-                    <li class="nav-item">
-                      <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="discografia.html">Discografía</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="historia.html">Historia</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Estilos
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="vestimentas.html">Vestimenta</a>
-                        <a class="dropdown-item" href="makeup.html">MakeUp</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>                 
-                    <li class="nav-item">
-                      <button class="switch" id="switch">
-                        <span><i class="fas fa-sun"></i></span>
-                        <span><i class="fas fa-moon"></i></span>
-                      </button>
-                    </li>                                    
-                  </ul>                  
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="index.html">
+        <img src="../imagenes/logo/logo.png" width="70" height="70" alt="LogoHeader" loading="lazy"
+          class="header__logo">
+      </a>
+      <form class="form-inline">
+        <!--La etiqueta Muestra el navBar a la derecha -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="discografia.html">Discografía</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="historia.html">Historia</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Estilos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="vestimentas.html">Vestimenta</a>
+                <a class="dropdown-item" href="makeup.html">MakeUp</a>
               </div>
-            </form>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span><i class="fas fa-bars"></i> </span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <button class="switch" id="switch">
+                <span><i class="fas fa-sun"></i></span>
+                <span><i class="fas fa-moon"></i></span>
               </button>
-          </nav>
+            </li>
+          </ul>
+        </div>
+      </form>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i> </span>
+      </button>
+    </nav>
   </header>
   <!-- Barra Makeup -->
   <section>
-      <main class="makeups">
-      <a href="makeup.html"><h1 class="makeup__titulo">MakeUps Icónicos</h1></a>
-          <nav class="nav flex-column" >
-            <a class="nav-link animate__animated animate__fadeInLeftBig" href="#ziggyStardustMakeup" id="nav-link1">Ziggy Stardust</a>
-            <a class="nav-link animate__animated animate__fadeInLeftBig" href="#aladdinSaneMakeup" id="nav-link2">Aladdín Sane</a>
-            <a class="nav-link animate__animated animate__fadeInLeftBig" href="#scaryMonstersMakeup" id="nav-link3">Scary Monsters</a>
-            <a class="nav-link animate__animated animate__fadeInLeftBig" href="#labyrinthMakeUp" id="nav-link4">Labyrinth</a>
-            <a class="nav-link animate__animated animate__fadeInLeftBig" href="#hunkyDoryMakeUp" id="nav-link5">Hunky Dory</a>
-          </nav>
-        <!-- MakeUp "Ziggy Stardust" -->
+    <main class="makeups">
+      <a href="makeup.html">
+        <h1 class="makeup__titulo">MakeUps Icónicos</h1>
+      </a>
+      <nav class="nav flex-column">
+        <a class="nav-link animate__animated animate__fadeInLeftBig" href="#ziggyStardustMakeup" id="nav-link1">Ziggy
+          Stardust</a>
+        <a class="nav-link animate__animated animate__fadeInLeftBig" href="#aladdinSaneMakeup" id="nav-link2">Aladdín
+          Sane</a>
+        <a class="nav-link animate__animated animate__fadeInLeftBig" href="#scaryMonstersMakeup" id="nav-link3">Scary
+          Monsters</a>
+        <a class="nav-link animate__animated animate__fadeInLeftBig" href="#labyrinthMakeUp"
+          id="nav-link4">Labyrinth</a>
+        <a class="nav-link animate__animated animate__fadeInLeftBig" href="#hunkyDoryMakeUp" id="nav-link5">Hunky
+          Dory</a>
+      </nav>
+      <!-- MakeUp "Ziggy Stardust" -->
 
-        <h2 class="makeup__subTitulo1" id="ziggyStardustMakeup">Ziggy Stardust</h2>
-          <div class="container">
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="sliderHunkyDory">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../imagenes/makeup/ziggyMakeup1.png" class="d-block w-100" alt="Make Ups Ziggy Stardust">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../imagenes/makeup/ziggyMakeup2.png" class="d-block w-100" alt="Make Ups Ziggy Stardust">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../imagenes/makeup/ziggyMakeup3.png" class="d-block w-100" alt="Make Ups Ziggy Stardust">
-                    </div>
-                </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-              </div>
-          </div>
-        <!-- MakeUp "Aladdín Sane" -->
-        <h2 class="makeup__subTitulo2" id="aladdinSaneMakeup">Aladdín Sane</h2>
-          <div class="container">
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../imagenes/makeup/aladdinSane1.png" class="d-block w-100" alt="Aladdin Sane Makeup">
-                      <div class="carousel-caption d-none d-md-block">
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../imagenes/makeup/aladdinSane2.png" class="d-block w-100" alt="Aladdin Sane Makeup">
-                      <div class="carousel-caption d-none d-md-block">
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../imagenes/makeup/aladdinSane3.png" class="d-block w-100" alt="Aladdin Sane Makeup">
-                      <div class="carousel-caption d-none d-md-block">
-                      </div>
-                    </div>
-                </div>
-              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+      <h2 class="makeup__subTitulo1" id="ziggyStardustMakeup">Ziggy Stardust</h2>
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="sliderHunkyDory">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../imagenes/makeup/ziggyMakeup1.png" class="d-block w-100" alt="Make Ups Ziggy Stardust">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/ziggyMakeup2.png" class="d-block w-100" alt="Make Ups Ziggy Stardust">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/ziggyMakeup3.png" class="d-block w-100" alt="Make Ups Ziggy Stardust">
             </div>
           </div>
-        <!-- MakeUp "Scary Monsters" -->
-        <h2 class="makeup__subTitulo3" id="scaryMonstersMakeup">Scary Monsters (& Super Creeps)</h2>
-          <div class="container">
-              <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../imagenes/makeup/scaryMonsters1.png" class="d-block w-100" alt="Scary Monsters MakeUp">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../imagenes/makeup/scaryMonsters2.png" class="d-block w-100" alt="Scary Monsters MakeUp">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../imagenes/makeup/scaryMonsters3.png" class="d-block w-100" alt="Scary Monsters MakeUp">
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <!-- MakeUp "Aladdín Sane" -->
+      <h2 class="makeup__subTitulo2" id="aladdinSaneMakeup">Aladdín Sane</h2>
+      <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../imagenes/makeup/aladdinSane1.png" class="d-block w-100" alt="Aladdin Sane Makeup">
+              <div class="carousel-caption d-none d-md-block">
               </div>
-          </div>
-        <!-- MakeUp "Labyrinth" -->
-        <h2 class="makeup__subTitulo4" id="labyrinthMakeUp">Labyrinth</h2>
-          <div class="container">
-              <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                      <div class="carousel-item active" data-interval="10000">
-                        <img src="../imagenes/makeup/labyrinth1.png" class="d-block w-100" alt="Labyrinth MakeUp">
-                      </div>
-                      <div class="carousel-item" data-interval="2000">
-                        <img src="../imagenes/makeup/labyrinth2.png" class="d-block w-100" alt="Labyrinth MakeUp">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../imagenes/makeup/labyrinth3.png" class="d-block w-100" alt="Labyrinth MakeUp">
-                      </div>
-                  </div>
-                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/aladdinSane2.png" class="d-block w-100" alt="Aladdin Sane Makeup">
+              <div class="carousel-caption d-none d-md-block">
               </div>
-          </div>
-        <!-- MakeUp "Hunky Dory" -->
-        <h2 class="makeup__subTitulo5" id="hunkyDoryMakeUp">Hunky Dory</h2>
-          <div class="container">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../imagenes/makeup/hunkyDoryMakeup1.png" class="d-block w-100" alt="Hunky Dory MakeUp">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../imagenes/makeup/hunkyDoryMakeup2.png" class="d-block w-100" alt="Hunky Dory MakeUp">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../imagenes/makeup/hunkyDoryMakeup3.png" class="d-block w-100" alt="Hunky Dory MakeUp">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/aladdinSane3.png" class="d-block w-100" alt="Aladdin Sane Makeup">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
             </div>
           </div>
-      </main>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <!-- MakeUp "Scary Monsters" -->
+      <h2 class="makeup__subTitulo3" id="scaryMonstersMakeup">Scary Monsters (& Super Creeps)</h2>
+      <div class="container">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../imagenes/makeup/scaryMonsters1.png" class="d-block w-100" alt="Scary Monsters MakeUp">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/scaryMonsters2.png" class="d-block w-100" alt="Scary Monsters MakeUp">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/scaryMonsters3.png" class="d-block w-100" alt="Scary Monsters MakeUp">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <!-- MakeUp "Labyrinth" -->
+      <h2 class="makeup__subTitulo4" id="labyrinthMakeUp">Labyrinth</h2>
+      <div class="container">
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="10000">
+              <img src="../imagenes/makeup/labyrinth1.png" class="d-block w-100" alt="Labyrinth MakeUp">
+            </div>
+            <div class="carousel-item" data-interval="2000">
+              <img src="../imagenes/makeup/labyrinth2.png" class="d-block w-100" alt="Labyrinth MakeUp">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/labyrinth3.png" class="d-block w-100" alt="Labyrinth MakeUp">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <!-- MakeUp "Hunky Dory" -->
+      <h2 class="makeup__subTitulo5" id="hunkyDoryMakeUp">Hunky Dory</h2>
+      <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../imagenes/makeup/hunkyDoryMakeup1.png" class="d-block w-100" alt="Hunky Dory MakeUp">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/hunkyDoryMakeup2.png" class="d-block w-100" alt="Hunky Dory MakeUp">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/makeup/hunkyDoryMakeup3.png" class="d-block w-100" alt="Hunky Dory MakeUp">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </main>
   </section>
   <hr>
   <!-- Footer -->
-    <footer>
-        <div class="descripcion__footer">
-          <a href="makeup.html"><img src="../imagenes/logo/logo.png" alt="Logo en Footer" class="footer__imagen"></a> 
-          <p class="texto__footer">
-            Esta página se creó con la intención de que más personas le den una oportunidad de conocer a David Bowie, si te gustaría darme tu opinión o dar algún aporte hazmelo saber en mis redes.
-            Derechos reservados F.E.M. © 2020     
-          </p>
-        </div>
-        <div class="redes__bowie">          
-        <p class="titulo__footer">David Bowie</p>
-            <a href="https://www.facebook.com/davidbowie" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/davidbowie/" target="_blank"><i class="fab fa-instagram"></i></a>                         
-        </div>
-        <div class="mis__redes">
-        <p class="titulo__footer">Mis redes</p>
-            <a href="https://www.linkedin.com/in/franco-ezequiel-marchegiani-7b8712199/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Franco-Ezequiel-Marchegiani" target="_blank"><i class="fab fa-github-square"></i></a>                
-        </div>
-    </footer>
+  <footer>
+    <div class="descripcion__footer">
+      <a href="makeup.html"><img src="../imagenes/logo/logo.png" alt="Logo en Footer" class="footer__imagen"></a>
+      <p class="texto__footer">
+        Esta página se creó con la intención de que más personas le den una oportunidad de conocer a David Bowie, si te
+        gustaría darme tu opinión o dar algún aporte hazmelo saber en mis redes.
+        Derechos reservados F.E.M. © 2020
+      </p>
+    </div>
+    <div class="redes__bowie">
+      <p class="titulo__footer">David Bowie</p>
+      <a href="https://www.facebook.com/davidbowie" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://www.instagram.com/davidbowie/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="mis__redes">
+      <p class="titulo__footer">Mis redes</p>
+      <a href="https://www.linkedin.com/in/franco-ezequiel-marchegiani-7b8712199/" target="_blank"><i
+          class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Franco-Ezequiel-Marchegiani" target="_blank"><i class="fab fa-github-square"></i></a>
+    </div>
+  </footer>
   <!-- JavaScript -->
   <script src="../js/darkMode.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-  </script>
+    </script>
 </body>
+
 </html>
