@@ -15,11 +15,11 @@ btnSwitch.addEventListener('click', e => {
     btnSwitch.classList.toggle('active');
     // Guarda el modo en el localStorage.
     //Funciona el código, pero lo comenté porque no logré implementarlo para que cambie la imagen también
-    /*  if(document.body.classList.contains('dark')){
+      if(document.body.classList.contains('dark')){
         localStorage.setItem('dark-mode', 'true');
     } else {
         localStorage.setItem('dark-mode', 'false');
-    } */
+    }
 });
 // Modo actual en el que estamos
  if(localStorage.getItem('dark-mode') === 'true'){
